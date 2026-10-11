@@ -1,0 +1,12 @@
+node_modules/
+dist/
+!examples/notes/dist/
+!examples/notes/dist/**
+artifacts/
+output/
+*.tgz
+*.log
+.DS_Store
+profiles/
+auth-state*
+playwright-report/

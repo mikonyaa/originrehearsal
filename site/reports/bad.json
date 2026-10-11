@@ -1,0 +1,4627 @@
+{
+  "schemaVersion": 1,
+  "toolVersion": "0.1.0",
+  "runId": "833f4ea2-d59b-46b2-9c31-5509c3f3e695",
+  "caseId": "notes-v1-to-bad",
+  "startedAt": "2026-10-11T19:39:42.288Z",
+  "finishedAt": "2026-10-11T19:39:51.516Z",
+  "outcome": "VIOLATION",
+  "exitCode": 1,
+  "environment": {
+    "node": "v24.21.0",
+    "playwright": "1.64.0",
+    "chromium": "156.0.8078.4",
+    "os": "darwin 25.6.0",
+    "arch": "arm64"
+  },
+  "digests": {
+    "config": "496c6b6f54389f197892e10c17603d8f0f98072ddcf66e2a15686826d0627e08",
+    "hooks": "586dd4fb4207766a2e0bb02533950c47577ccaf0a8c8b226a761c85c3886a9f7",
+    "old": "fd39c62ea7bbc70f106327f1d0b308a9ee79377e13882f1e0cec4e8e465b2e77",
+    "new": "4becd5154af13ed47ef301c878f56ca0eeb4c7bcd69cfbdf22b8f121d50a0e56"
+  },
+  "buildIds": {
+    "old": "notes-v1",
+    "new": "notes-v2-bad"
+  },
+  "origin": "http://127.0.0.1:62783",
+  "seed": {
+    "inputDigest": "412f020ddc3a35036328072f91bc1625dbfb5620af98522f66307cbb42269327",
+    "controlRunId": "cbf25151-c3e3-43d1-a042-12ff1a74c7fe",
+    "upgradeRunId": "99783829-e5bc-43df-8795-d0ef24a37d6a",
+    "fingerprintsMatch": true
+  },
+  "cachePolicy": "no-store",
+  "coverage": {
+    "localStorageKeys": [
+      "ui-prefs",
+      "preferences"
+    ],
+    "indexedDB": [
+      {
+        "name": "notes",
+        "stores": [
+          "notes",
+          "tags",
+          "scratch"
+        ]
+      }
+    ],
+    "complete": true
+  },
+  "events": [
+    {
+      "phase": "validate",
+      "startedAt": "2026-10-11T19:39:42.290Z",
+      "durationMs": 14,
+      "outcome": "PASS",
+      "reason": "Completed"
+    },
+    {
+      "phase": "prepare",
+      "startedAt": "2026-10-11T19:39:42.305Z",
+      "durationMs": 11,
+      "outcome": "PASS",
+      "reason": "Completed"
+    },
+    {
+      "phase": "report",
+      "startedAt": "2026-10-11T19:39:51.506Z",
+      "durationMs": 7,
+      "outcome": "PASS",
+      "reason": "Completed"
+    },
+    {
+      "phase": "cleanup",
+      "startedAt": "2026-10-11T19:39:51.513Z",
+      "durationMs": 3,
+      "outcome": "PASS",
+      "reason": "Completed"
+    }
+  ],
+  "diagnostics": [
+    {
+      "outcome": "VIOLATION",
+      "phase": "assertions",
+      "reason": "60 storage contracts violated; see stable check IDs and subjects"
+    }
+  ],
+  "limitations": [
+    "Static builds on one loopback HTTP origin.",
+    "no-store cold updates; production cache parity is not claimed.",
+    "Service workers are unsupported and never blocked or removed.",
+    "Only selected localStorage keys, string/finite-number IDB keys and JSON values.",
+    "Separate fresh control and upgrade profiles; no storage restore.",
+    "Reports contain selected application data. Hooks are trusted local code."
+  ],
+  "cleanup": {
+    "gatewayClosed": true,
+    "ownedRootRemoved": true
+  },
+  "control": {
+    "runId": "cbf25151-c3e3-43d1-a042-12ff1a74c7fe",
+    "kind": "control",
+    "profileId": "control-2b511b66-f75a-415a-ad2d-391e525648ce",
+    "outcome": "PASS",
+    "events": [
+      {
+        "phase": "old-ready",
+        "startedAt": "2026-10-11T19:39:42.320Z",
+        "durationMs": 666,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "seed-complete",
+        "startedAt": "2026-10-11T19:39:42.986Z",
+        "durationMs": 44,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "before-captured",
+        "startedAt": "2026-10-11T19:39:43.030Z",
+        "durationMs": 50,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "browser-closed",
+        "startedAt": "2026-10-11T19:39:43.080Z",
+        "durationMs": 322,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "gateway-switched",
+        "startedAt": "2026-10-11T19:39:43.402Z",
+        "durationMs": 2,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "new-observed",
+        "startedAt": "2026-10-11T19:39:43.404Z",
+        "durationMs": 241,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "new-ready",
+        "startedAt": "2026-10-11T19:39:43.645Z",
+        "durationMs": 6,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "after-captured",
+        "startedAt": "2026-10-11T19:39:43.651Z",
+        "durationMs": 29,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "assertions",
+        "startedAt": "2026-10-11T19:39:43.680Z",
+        "durationMs": 3,
+        "outcome": "PASS",
+        "reason": "Completed"
+      }
+    ],
+    "builds": [
+      {
+        "backend": {
+          "runId": "833f4ea2-d59b-46b2-9c31-5509c3f3e695",
+          "phase": "old",
+          "buildHash": "fd39c62ea7bbc70f106327f1d0b308a9ee79377e13882f1e0cec4e8e465b2e77",
+          "challenge": "f7c3e98e-d17f-4a89-88c4-5112f1badb43"
+        },
+        "backendConfirmed": true,
+        "executedAppId": "notes-v1",
+        "expectedAppId": "notes-v1",
+        "appConfirmed": true,
+        "origin": "http://127.0.0.1:62783",
+        "profileId": "control-2b511b66-f75a-415a-ad2d-391e525648ce",
+        "userDataDirConfirmed": true,
+        "serviceWorkers": {
+          "controller": null,
+          "registrations": []
+        }
+      },
+      {
+        "backend": {
+          "runId": "833f4ea2-d59b-46b2-9c31-5509c3f3e695",
+          "phase": "old",
+          "buildHash": "fd39c62ea7bbc70f106327f1d0b308a9ee79377e13882f1e0cec4e8e465b2e77",
+          "challenge": "6dbd2dd3-78d0-416c-a401-14be536cb435"
+        },
+        "backendConfirmed": true,
+        "executedAppId": "notes-v1",
+        "expectedAppId": "notes-v1",
+        "appConfirmed": true,
+        "origin": "http://127.0.0.1:62783",
+        "profileId": "control-2b511b66-f75a-415a-ad2d-391e525648ce",
+        "userDataDirConfirmed": true,
+        "serviceWorkers": {
+          "controller": null,
+          "registrations": []
+        }
+      }
+    ],
+    "checks": {
+      "seed": [
+        {
+          "id": "seed.ids.note-001",
+          "subject": "indexedDB/notes/notes/note-001/id",
+          "actual": "note-001",
+          "expected": "note-001",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-002",
+          "subject": "indexedDB/notes/notes/note-002/id",
+          "actual": "note-002",
+          "expected": "note-002",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-003",
+          "subject": "indexedDB/notes/notes/note-003/id",
+          "actual": "note-003",
+          "expected": "note-003",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-004",
+          "subject": "indexedDB/notes/notes/note-004/id",
+          "actual": "note-004",
+          "expected": "note-004",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-005",
+          "subject": "indexedDB/notes/notes/note-005/id",
+          "actual": "note-005",
+          "expected": "note-005",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-006",
+          "subject": "indexedDB/notes/notes/note-006/id",
+          "actual": "note-006",
+          "expected": "note-006",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-007",
+          "subject": "indexedDB/notes/notes/note-007/id",
+          "actual": "note-007",
+          "expected": "note-007",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-008",
+          "subject": "indexedDB/notes/notes/note-008/id",
+          "actual": "note-008",
+          "expected": "note-008",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-009",
+          "subject": "indexedDB/notes/notes/note-009/id",
+          "actual": "note-009",
+          "expected": "note-009",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-010",
+          "subject": "indexedDB/notes/notes/note-010/id",
+          "actual": "note-010",
+          "expected": "note-010",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-011",
+          "subject": "indexedDB/notes/notes/note-011/id",
+          "actual": "note-011",
+          "expected": "note-011",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-012",
+          "subject": "indexedDB/notes/notes/note-012/id",
+          "actual": "note-012",
+          "expected": "note-012",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-013",
+          "subject": "indexedDB/notes/notes/note-013/id",
+          "actual": "note-013",
+          "expected": "note-013",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-014",
+          "subject": "indexedDB/notes/notes/note-014/id",
+          "actual": "note-014",
+          "expected": "note-014",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-015",
+          "subject": "indexedDB/notes/notes/note-015/id",
+          "actual": "note-015",
+          "expected": "note-015",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-016",
+          "subject": "indexedDB/notes/notes/note-016/id",
+          "actual": "note-016",
+          "expected": "note-016",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-017",
+          "subject": "indexedDB/notes/notes/note-017/id",
+          "actual": "note-017",
+          "expected": "note-017",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-018",
+          "subject": "indexedDB/notes/notes/note-018/id",
+          "actual": "note-018",
+          "expected": "note-018",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-019",
+          "subject": "indexedDB/notes/notes/note-019/id",
+          "actual": "note-019",
+          "expected": "note-019",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-020",
+          "subject": "indexedDB/notes/notes/note-020/id",
+          "actual": "note-020",
+          "expected": "note-020",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-001",
+          "subject": "indexedDB/notes/notes/note-001",
+          "actual": {
+            "id": "note-001",
+            "text": "Note 01: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-01T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-001",
+            "text": "Note 01: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-01T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-002",
+          "subject": "indexedDB/notes/notes/note-002",
+          "actual": {
+            "id": "note-002",
+            "text": "Note 02: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-02T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-002",
+            "text": "Note 02: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-02T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-003",
+          "subject": "indexedDB/notes/notes/note-003",
+          "actual": {
+            "id": "note-003",
+            "text": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+            "createdAt": "2026-01-03T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-003",
+            "text": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+            "createdAt": "2026-01-03T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-004",
+          "subject": "indexedDB/notes/notes/note-004",
+          "actual": {
+            "id": "note-004",
+            "text": "Note 04: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-04T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-004",
+            "text": "Note 04: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-04T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-005",
+          "subject": "indexedDB/notes/notes/note-005",
+          "actual": {
+            "id": "note-005",
+            "text": "Note 05: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-05T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-005",
+            "text": "Note 05: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-05T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-006",
+          "subject": "indexedDB/notes/notes/note-006",
+          "actual": {
+            "id": "note-006",
+            "text": "Note 06: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-06T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-006",
+            "text": "Note 06: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-06T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-007",
+          "subject": "indexedDB/notes/notes/note-007",
+          "actual": {
+            "id": "note-007",
+            "text": "Note 07: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-07T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-007",
+            "text": "Note 07: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-07T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-008",
+          "subject": "indexedDB/notes/notes/note-008",
+          "actual": {
+            "id": "note-008",
+            "text": "Note 08: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-08T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-008",
+            "text": "Note 08: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-08T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-009",
+          "subject": "indexedDB/notes/notes/note-009",
+          "actual": {
+            "id": "note-009",
+            "text": "Note 09: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-09T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-009",
+            "text": "Note 09: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-09T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-010",
+          "subject": "indexedDB/notes/notes/note-010",
+          "actual": {
+            "id": "note-010",
+            "text": "Note 10: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-10T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-010",
+            "text": "Note 10: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-10T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-011",
+          "subject": "indexedDB/notes/notes/note-011",
+          "actual": {
+            "id": "note-011",
+            "text": "Note 11: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-11T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-011",
+            "text": "Note 11: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-11T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-012",
+          "subject": "indexedDB/notes/notes/note-012",
+          "actual": {
+            "id": "note-012",
+            "text": "Note 12: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-12T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-012",
+            "text": "Note 12: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-12T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-013",
+          "subject": "indexedDB/notes/notes/note-013",
+          "actual": {
+            "id": "note-013",
+            "text": "Note 13: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-13T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-013",
+            "text": "Note 13: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-13T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-014",
+          "subject": "indexedDB/notes/notes/note-014",
+          "actual": {
+            "id": "note-014",
+            "text": "Note 14: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-14T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-014",
+            "text": "Note 14: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-14T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-015",
+          "subject": "indexedDB/notes/notes/note-015",
+          "actual": {
+            "id": "note-015",
+            "text": "Note 15: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-15T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-015",
+            "text": "Note 15: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-15T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-016",
+          "subject": "indexedDB/notes/notes/note-016",
+          "actual": {
+            "id": "note-016",
+            "text": "Note 16: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-16T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-016",
+            "text": "Note 16: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-16T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-017",
+          "subject": "indexedDB/notes/notes/note-017",
+          "actual": {
+            "id": "note-017",
+            "text": "Note 17: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-17T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-017",
+            "text": "Note 17: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-17T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-018",
+          "subject": "indexedDB/notes/notes/note-018",
+          "actual": {
+            "id": "note-018",
+            "text": "Note 18: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-18T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-018",
+            "text": "Note 18: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-18T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-019",
+          "subject": "indexedDB/notes/notes/note-019",
+          "actual": {
+            "id": "note-019",
+            "text": "Note 19: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-19T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-019",
+            "text": "Note 19: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-19T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-020",
+          "subject": "indexedDB/notes/notes/note-020",
+          "actual": {
+            "id": "note-020",
+            "text": "Note 20: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-20T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-020",
+            "text": "Note 20: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-20T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.tags",
+          "subject": "indexedDB/notes/tags",
+          "actual": [
+            {
+              "id": "tag-personal",
+              "name": "Personal"
+            },
+            {
+              "id": "tag-work",
+              "name": "Work"
+            }
+          ],
+          "expected": [
+            {
+              "id": "tag-personal",
+              "name": "Personal"
+            },
+            {
+              "id": "tag-work",
+              "name": "Work"
+            }
+          ],
+          "explanation": "Seed tags must match the declared specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.scratch",
+          "subject": "indexedDB/notes/scratch",
+          "actual": [
+            {
+              "id": "draft-temp",
+              "text": "Intentionally transient"
+            }
+          ],
+          "expected": [
+            {
+              "id": "draft-temp",
+              "text": "Intentionally transient"
+            }
+          ],
+          "explanation": "The OLD app persists its transient draft.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.preferences",
+          "subject": "localStorage/ui-prefs",
+          "actual": {
+            "state": "present",
+            "value": {
+              "theme": "paper",
+              "fontSize": 16,
+              "language": "en"
+            }
+          },
+          "expected": {
+            "state": "present",
+            "value": {
+              "theme": "paper",
+              "fontSize": 16,
+              "language": "en"
+            }
+          },
+          "explanation": "The OLD app persists its preference values.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.new-key",
+          "subject": "localStorage/preferences",
+          "actual": "missing",
+          "expected": "missing",
+          "explanation": "The new preference key does not exist yet.",
+          "outcome": "PASS"
+        }
+      ],
+      "cold": [
+        {
+          "id": "cold.ids.note-001",
+          "subject": "indexedDB/notes/notes/note-001/id",
+          "actual": "note-001",
+          "expected": "note-001",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-002",
+          "subject": "indexedDB/notes/notes/note-002/id",
+          "actual": "note-002",
+          "expected": "note-002",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-003",
+          "subject": "indexedDB/notes/notes/note-003/id",
+          "actual": "note-003",
+          "expected": "note-003",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-004",
+          "subject": "indexedDB/notes/notes/note-004/id",
+          "actual": "note-004",
+          "expected": "note-004",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-005",
+          "subject": "indexedDB/notes/notes/note-005/id",
+          "actual": "note-005",
+          "expected": "note-005",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-006",
+          "subject": "indexedDB/notes/notes/note-006/id",
+          "actual": "note-006",
+          "expected": "note-006",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-007",
+          "subject": "indexedDB/notes/notes/note-007/id",
+          "actual": "note-007",
+          "expected": "note-007",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-008",
+          "subject": "indexedDB/notes/notes/note-008/id",
+          "actual": "note-008",
+          "expected": "note-008",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-009",
+          "subject": "indexedDB/notes/notes/note-009/id",
+          "actual": "note-009",
+          "expected": "note-009",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-010",
+          "subject": "indexedDB/notes/notes/note-010/id",
+          "actual": "note-010",
+          "expected": "note-010",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-011",
+          "subject": "indexedDB/notes/notes/note-011/id",
+          "actual": "note-011",
+          "expected": "note-011",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-012",
+          "subject": "indexedDB/notes/notes/note-012/id",
+          "actual": "note-012",
+          "expected": "note-012",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-013",
+          "subject": "indexedDB/notes/notes/note-013/id",
+          "actual": "note-013",
+          "expected": "note-013",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-014",
+          "subject": "indexedDB/notes/notes/note-014/id",
+          "actual": "note-014",
+          "expected": "note-014",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-015",
+          "subject": "indexedDB/notes/notes/note-015/id",
+          "actual": "note-015",
+          "expected": "note-015",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-016",
+          "subject": "indexedDB/notes/notes/note-016/id",
+          "actual": "note-016",
+          "expected": "note-016",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-017",
+          "subject": "indexedDB/notes/notes/note-017/id",
+          "actual": "note-017",
+          "expected": "note-017",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-018",
+          "subject": "indexedDB/notes/notes/note-018/id",
+          "actual": "note-018",
+          "expected": "note-018",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-019",
+          "subject": "indexedDB/notes/notes/note-019/id",
+          "actual": "note-019",
+          "expected": "note-019",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.ids.note-020",
+          "subject": "indexedDB/notes/notes/note-020/id",
+          "actual": "note-020",
+          "expected": "note-020",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-001.text",
+          "subject": "indexedDB/notes/notes/note-001/text",
+          "actual": "Note 01: Preserve this text — Привет, 世界.",
+          "expected": "Note 01: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-001.createdAt",
+          "subject": "indexedDB/notes/notes/note-001/createdAt",
+          "actual": "2026-01-01T10:00:00Z",
+          "expected": "2026-01-01T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-001.tagIds",
+          "subject": "indexedDB/notes/notes/note-001/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-002.text",
+          "subject": "indexedDB/notes/notes/note-002/text",
+          "actual": "Note 02: Preserve this text — Привет, 世界.",
+          "expected": "Note 02: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-002.createdAt",
+          "subject": "indexedDB/notes/notes/note-002/createdAt",
+          "actual": "2026-01-02T10:00:00Z",
+          "expected": "2026-01-02T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-002.tagIds",
+          "subject": "indexedDB/notes/notes/note-002/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-003.text",
+          "subject": "indexedDB/notes/notes/note-003/text",
+          "actual": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+          "expected": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-003.createdAt",
+          "subject": "indexedDB/notes/notes/note-003/createdAt",
+          "actual": "2026-01-03T10:00:00Z",
+          "expected": "2026-01-03T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-003.tagIds",
+          "subject": "indexedDB/notes/notes/note-003/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-004.text",
+          "subject": "indexedDB/notes/notes/note-004/text",
+          "actual": "Note 04: Preserve this text — Привет, 世界.",
+          "expected": "Note 04: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-004.createdAt",
+          "subject": "indexedDB/notes/notes/note-004/createdAt",
+          "actual": "2026-01-04T10:00:00Z",
+          "expected": "2026-01-04T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-004.tagIds",
+          "subject": "indexedDB/notes/notes/note-004/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-005.text",
+          "subject": "indexedDB/notes/notes/note-005/text",
+          "actual": "Note 05: Preserve this text — Привет, 世界.",
+          "expected": "Note 05: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-005.createdAt",
+          "subject": "indexedDB/notes/notes/note-005/createdAt",
+          "actual": "2026-01-05T10:00:00Z",
+          "expected": "2026-01-05T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-005.tagIds",
+          "subject": "indexedDB/notes/notes/note-005/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-006.text",
+          "subject": "indexedDB/notes/notes/note-006/text",
+          "actual": "Note 06: Preserve this text — Привет, 世界.",
+          "expected": "Note 06: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-006.createdAt",
+          "subject": "indexedDB/notes/notes/note-006/createdAt",
+          "actual": "2026-01-06T10:00:00Z",
+          "expected": "2026-01-06T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-006.tagIds",
+          "subject": "indexedDB/notes/notes/note-006/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-007.text",
+          "subject": "indexedDB/notes/notes/note-007/text",
+          "actual": "Note 07: Preserve this text — Привет, 世界.",
+          "expected": "Note 07: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-007.createdAt",
+          "subject": "indexedDB/notes/notes/note-007/createdAt",
+          "actual": "2026-01-07T10:00:00Z",
+          "expected": "2026-01-07T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-007.tagIds",
+          "subject": "indexedDB/notes/notes/note-007/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-008.text",
+          "subject": "indexedDB/notes/notes/note-008/text",
+          "actual": "Note 08: Preserve this text — Привет, 世界.",
+          "expected": "Note 08: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-008.createdAt",
+          "subject": "indexedDB/notes/notes/note-008/createdAt",
+          "actual": "2026-01-08T10:00:00Z",
+          "expected": "2026-01-08T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-008.tagIds",
+          "subject": "indexedDB/notes/notes/note-008/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-009.text",
+          "subject": "indexedDB/notes/notes/note-009/text",
+          "actual": "Note 09: Preserve this text — Привет, 世界.",
+          "expected": "Note 09: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-009.createdAt",
+          "subject": "indexedDB/notes/notes/note-009/createdAt",
+          "actual": "2026-01-09T10:00:00Z",
+          "expected": "2026-01-09T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-009.tagIds",
+          "subject": "indexedDB/notes/notes/note-009/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-010.text",
+          "subject": "indexedDB/notes/notes/note-010/text",
+          "actual": "Note 10: Preserve this text — Привет, 世界.",
+          "expected": "Note 10: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-010.createdAt",
+          "subject": "indexedDB/notes/notes/note-010/createdAt",
+          "actual": "2026-01-10T10:00:00Z",
+          "expected": "2026-01-10T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-010.tagIds",
+          "subject": "indexedDB/notes/notes/note-010/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-011.text",
+          "subject": "indexedDB/notes/notes/note-011/text",
+          "actual": "Note 11: Preserve this text — Привет, 世界.",
+          "expected": "Note 11: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-011.createdAt",
+          "subject": "indexedDB/notes/notes/note-011/createdAt",
+          "actual": "2026-01-11T10:00:00Z",
+          "expected": "2026-01-11T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-011.tagIds",
+          "subject": "indexedDB/notes/notes/note-011/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-012.text",
+          "subject": "indexedDB/notes/notes/note-012/text",
+          "actual": "Note 12: Preserve this text — Привет, 世界.",
+          "expected": "Note 12: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-012.createdAt",
+          "subject": "indexedDB/notes/notes/note-012/createdAt",
+          "actual": "2026-01-12T10:00:00Z",
+          "expected": "2026-01-12T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-012.tagIds",
+          "subject": "indexedDB/notes/notes/note-012/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-013.text",
+          "subject": "indexedDB/notes/notes/note-013/text",
+          "actual": "Note 13: Preserve this text — Привет, 世界.",
+          "expected": "Note 13: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-013.createdAt",
+          "subject": "indexedDB/notes/notes/note-013/createdAt",
+          "actual": "2026-01-13T10:00:00Z",
+          "expected": "2026-01-13T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-013.tagIds",
+          "subject": "indexedDB/notes/notes/note-013/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-014.text",
+          "subject": "indexedDB/notes/notes/note-014/text",
+          "actual": "Note 14: Preserve this text — Привет, 世界.",
+          "expected": "Note 14: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-014.createdAt",
+          "subject": "indexedDB/notes/notes/note-014/createdAt",
+          "actual": "2026-01-14T10:00:00Z",
+          "expected": "2026-01-14T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-014.tagIds",
+          "subject": "indexedDB/notes/notes/note-014/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-015.text",
+          "subject": "indexedDB/notes/notes/note-015/text",
+          "actual": "Note 15: Preserve this text — Привет, 世界.",
+          "expected": "Note 15: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-015.createdAt",
+          "subject": "indexedDB/notes/notes/note-015/createdAt",
+          "actual": "2026-01-15T10:00:00Z",
+          "expected": "2026-01-15T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-015.tagIds",
+          "subject": "indexedDB/notes/notes/note-015/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-016.text",
+          "subject": "indexedDB/notes/notes/note-016/text",
+          "actual": "Note 16: Preserve this text — Привет, 世界.",
+          "expected": "Note 16: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-016.createdAt",
+          "subject": "indexedDB/notes/notes/note-016/createdAt",
+          "actual": "2026-01-16T10:00:00Z",
+          "expected": "2026-01-16T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-016.tagIds",
+          "subject": "indexedDB/notes/notes/note-016/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-017.text",
+          "subject": "indexedDB/notes/notes/note-017/text",
+          "actual": "Note 17: Preserve this text — Привет, 世界.",
+          "expected": "Note 17: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-017.createdAt",
+          "subject": "indexedDB/notes/notes/note-017/createdAt",
+          "actual": "2026-01-17T10:00:00Z",
+          "expected": "2026-01-17T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-017.tagIds",
+          "subject": "indexedDB/notes/notes/note-017/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-018.text",
+          "subject": "indexedDB/notes/notes/note-018/text",
+          "actual": "Note 18: Preserve this text — Привет, 世界.",
+          "expected": "Note 18: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-018.createdAt",
+          "subject": "indexedDB/notes/notes/note-018/createdAt",
+          "actual": "2026-01-18T10:00:00Z",
+          "expected": "2026-01-18T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-018.tagIds",
+          "subject": "indexedDB/notes/notes/note-018/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-019.text",
+          "subject": "indexedDB/notes/notes/note-019/text",
+          "actual": "Note 19: Preserve this text — Привет, 世界.",
+          "expected": "Note 19: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-019.createdAt",
+          "subject": "indexedDB/notes/notes/note-019/createdAt",
+          "actual": "2026-01-19T10:00:00Z",
+          "expected": "2026-01-19T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-019.tagIds",
+          "subject": "indexedDB/notes/notes/note-019/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-020.text",
+          "subject": "indexedDB/notes/notes/note-020/text",
+          "actual": "Note 20: Preserve this text — Привет, 世界.",
+          "expected": "Note 20: Preserve this text — Привет, 世界.",
+          "explanation": "Preserve text for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-020.createdAt",
+          "subject": "indexedDB/notes/notes/note-020/createdAt",
+          "actual": "2026-01-20T10:00:00Z",
+          "expected": "2026-01-20T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.fields.note-020.tagIds",
+          "subject": "indexedDB/notes/notes/note-020/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.tags",
+          "subject": "indexedDB/notes/tags",
+          "actual": [
+            {
+              "id": "tag-personal",
+              "name": "Personal"
+            },
+            {
+              "id": "tag-work",
+              "name": "Work"
+            }
+          ],
+          "expected": [
+            {
+              "id": "tag-personal",
+              "name": "Personal"
+            },
+            {
+              "id": "tag-work",
+              "name": "Work"
+            }
+          ],
+          "explanation": "OLD cold-start preserves tags.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.scratch",
+          "subject": "indexedDB/notes/scratch",
+          "actual": [
+            {
+              "id": "draft-temp",
+              "text": "Intentionally transient"
+            }
+          ],
+          "expected": [
+            {
+              "id": "draft-temp",
+              "text": "Intentionally transient"
+            }
+          ],
+          "explanation": "OLD cold-start retains its own scratch store.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.preferences",
+          "subject": "localStorage/ui-prefs",
+          "actual": {
+            "state": "present",
+            "value": {
+              "theme": "paper",
+              "fontSize": 16,
+              "language": "en"
+            }
+          },
+          "expected": {
+            "state": "present",
+            "value": {
+              "theme": "paper",
+              "fontSize": 16,
+              "language": "en"
+            }
+          },
+          "explanation": "OLD cold-start retains the OLD preference key.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "cold.new-key",
+          "subject": "localStorage/preferences",
+          "actual": "missing",
+          "expected": "missing",
+          "explanation": "OLD does not run the NEW key migration.",
+          "outcome": "PASS"
+        }
+      ],
+      "upgrade": []
+    },
+    "closure": [
+      {
+        "stage": "old",
+        "disconnected": true,
+        "processExited": true,
+        "forced": false
+      },
+      {
+        "stage": "cleanup",
+        "disconnected": true,
+        "processExited": true,
+        "forced": false
+      }
+    ],
+    "cleanup": {
+      "browserClosed": true,
+      "profileRemoved": true
+    },
+    "before": {
+      "capturedAt": "2026-10-11T19:39:43.039Z",
+      "origin": "http://127.0.0.1:62783",
+      "complete": true,
+      "localStorage": {
+        "ui-prefs": {
+          "state": "present",
+          "value": "{\"theme\":\"paper\",\"fontSize\":16,\"language\":\"en\"}"
+        },
+        "preferences": {
+          "state": "missing"
+        }
+      },
+      "indexedDB": {
+        "notes": {
+          "state": "present",
+          "version": 1,
+          "stores": {
+            "notes": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "note-001",
+                  "value": {
+                    "id": "note-001",
+                    "text": "Note 01: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-01T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-002",
+                  "value": {
+                    "id": "note-002",
+                    "text": "Note 02: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-02T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-003",
+                  "value": {
+                    "id": "note-003",
+                    "text": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+                    "createdAt": "2026-01-03T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-004",
+                  "value": {
+                    "id": "note-004",
+                    "text": "Note 04: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-04T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-005",
+                  "value": {
+                    "id": "note-005",
+                    "text": "Note 05: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-05T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-006",
+                  "value": {
+                    "id": "note-006",
+                    "text": "Note 06: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-06T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-007",
+                  "value": {
+                    "id": "note-007",
+                    "text": "Note 07: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-07T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-008",
+                  "value": {
+                    "id": "note-008",
+                    "text": "Note 08: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-08T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-009",
+                  "value": {
+                    "id": "note-009",
+                    "text": "Note 09: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-09T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-010",
+                  "value": {
+                    "id": "note-010",
+                    "text": "Note 10: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-10T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-011",
+                  "value": {
+                    "id": "note-011",
+                    "text": "Note 11: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-11T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-012",
+                  "value": {
+                    "id": "note-012",
+                    "text": "Note 12: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-12T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-013",
+                  "value": {
+                    "id": "note-013",
+                    "text": "Note 13: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-13T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-014",
+                  "value": {
+                    "id": "note-014",
+                    "text": "Note 14: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-14T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-015",
+                  "value": {
+                    "id": "note-015",
+                    "text": "Note 15: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-15T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-016",
+                  "value": {
+                    "id": "note-016",
+                    "text": "Note 16: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-16T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-017",
+                  "value": {
+                    "id": "note-017",
+                    "text": "Note 17: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-17T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-018",
+                  "value": {
+                    "id": "note-018",
+                    "text": "Note 18: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-18T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-019",
+                  "value": {
+                    "id": "note-019",
+                    "text": "Note 19: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-19T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-020",
+                  "value": {
+                    "id": "note-020",
+                    "text": "Note 20: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-20T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                }
+              ]
+            },
+            "tags": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "tag-personal",
+                  "value": {
+                    "id": "tag-personal",
+                    "name": "Personal"
+                  }
+                },
+                {
+                  "key": "tag-work",
+                  "value": {
+                    "id": "tag-work",
+                    "name": "Work"
+                  }
+                }
+              ]
+            },
+            "scratch": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "draft-temp",
+                  "value": {
+                    "id": "draft-temp",
+                    "text": "Intentionally transient"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "problems": []
+    },
+    "seedFingerprint": {
+      "digest": "18286827850e5bfa55147866cbab1ce6150720ee18c0497459230db1ac2d9c51",
+      "normalization": [
+        "Sort notes and tags by stable application ID using English collation.",
+        "Keep fixed createdAt strings, text, tag IDs and preferences unchanged.",
+        "Exclude capture time and independent physical profile identity."
+      ]
+    },
+    "after": {
+      "capturedAt": "2026-10-11T19:39:43.656Z",
+      "origin": "http://127.0.0.1:62783",
+      "complete": true,
+      "localStorage": {
+        "ui-prefs": {
+          "state": "present",
+          "value": "{\"theme\":\"paper\",\"fontSize\":16,\"language\":\"en\"}"
+        },
+        "preferences": {
+          "state": "missing"
+        }
+      },
+      "indexedDB": {
+        "notes": {
+          "state": "present",
+          "version": 1,
+          "stores": {
+            "notes": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "note-001",
+                  "value": {
+                    "id": "note-001",
+                    "text": "Note 01: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-01T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-002",
+                  "value": {
+                    "id": "note-002",
+                    "text": "Note 02: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-02T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-003",
+                  "value": {
+                    "id": "note-003",
+                    "text": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+                    "createdAt": "2026-01-03T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-004",
+                  "value": {
+                    "id": "note-004",
+                    "text": "Note 04: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-04T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-005",
+                  "value": {
+                    "id": "note-005",
+                    "text": "Note 05: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-05T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-006",
+                  "value": {
+                    "id": "note-006",
+                    "text": "Note 06: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-06T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-007",
+                  "value": {
+                    "id": "note-007",
+                    "text": "Note 07: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-07T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-008",
+                  "value": {
+                    "id": "note-008",
+                    "text": "Note 08: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-08T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-009",
+                  "value": {
+                    "id": "note-009",
+                    "text": "Note 09: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-09T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-010",
+                  "value": {
+                    "id": "note-010",
+                    "text": "Note 10: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-10T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-011",
+                  "value": {
+                    "id": "note-011",
+                    "text": "Note 11: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-11T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-012",
+                  "value": {
+                    "id": "note-012",
+                    "text": "Note 12: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-12T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-013",
+                  "value": {
+                    "id": "note-013",
+                    "text": "Note 13: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-13T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-014",
+                  "value": {
+                    "id": "note-014",
+                    "text": "Note 14: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-14T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-015",
+                  "value": {
+                    "id": "note-015",
+                    "text": "Note 15: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-15T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-016",
+                  "value": {
+                    "id": "note-016",
+                    "text": "Note 16: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-16T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-017",
+                  "value": {
+                    "id": "note-017",
+                    "text": "Note 17: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-17T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-018",
+                  "value": {
+                    "id": "note-018",
+                    "text": "Note 18: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-18T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-019",
+                  "value": {
+                    "id": "note-019",
+                    "text": "Note 19: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-19T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-020",
+                  "value": {
+                    "id": "note-020",
+                    "text": "Note 20: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-20T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                }
+              ]
+            },
+            "tags": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "tag-personal",
+                  "value": {
+                    "id": "tag-personal",
+                    "name": "Personal"
+                  }
+                },
+                {
+                  "key": "tag-work",
+                  "value": {
+                    "id": "tag-work",
+                    "name": "Work"
+                  }
+                }
+              ]
+            },
+            "scratch": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "draft-temp",
+                  "value": {
+                    "id": "draft-temp",
+                    "text": "Intentionally transient"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "problems": []
+    }
+  },
+  "upgrade": {
+    "runId": "99783829-e5bc-43df-8795-d0ef24a37d6a",
+    "kind": "upgrade",
+    "profileId": "upgrade-3da5a4d5-b723-4137-ab53-38f10ecad761",
+    "outcome": "VIOLATION",
+    "events": [
+      {
+        "phase": "old-ready",
+        "startedAt": "2026-10-11T19:39:43.984Z",
+        "durationMs": 196,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "seed-complete",
+        "startedAt": "2026-10-11T19:39:44.180Z",
+        "durationMs": 17,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "before-captured",
+        "startedAt": "2026-10-11T19:39:44.197Z",
+        "durationMs": 2872,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "browser-closed",
+        "startedAt": "2026-10-11T19:39:47.069Z",
+        "durationMs": 707,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "gateway-switched",
+        "startedAt": "2026-10-11T19:39:47.776Z",
+        "durationMs": 2,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "new-observed",
+        "startedAt": "2026-10-11T19:39:47.778Z",
+        "durationMs": 160,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "new-ready",
+        "startedAt": "2026-10-11T19:39:47.938Z",
+        "durationMs": 8,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "after-captured",
+        "startedAt": "2026-10-11T19:39:47.946Z",
+        "durationMs": 2846,
+        "outcome": "PASS",
+        "reason": "Completed"
+      },
+      {
+        "phase": "assertions",
+        "startedAt": "2026-10-11T19:39:50.792Z",
+        "durationMs": 7,
+        "outcome": "VIOLATION",
+        "reason": "Application data violated upgrade contracts"
+      }
+    ],
+    "builds": [
+      {
+        "backend": {
+          "runId": "833f4ea2-d59b-46b2-9c31-5509c3f3e695",
+          "phase": "old",
+          "buildHash": "fd39c62ea7bbc70f106327f1d0b308a9ee79377e13882f1e0cec4e8e465b2e77",
+          "challenge": "461698a9-f528-430a-90fd-6730cf697ade"
+        },
+        "backendConfirmed": true,
+        "executedAppId": "notes-v1",
+        "expectedAppId": "notes-v1",
+        "appConfirmed": true,
+        "origin": "http://127.0.0.1:62783",
+        "profileId": "upgrade-3da5a4d5-b723-4137-ab53-38f10ecad761",
+        "userDataDirConfirmed": true,
+        "serviceWorkers": {
+          "controller": null,
+          "registrations": []
+        }
+      },
+      {
+        "backend": {
+          "runId": "833f4ea2-d59b-46b2-9c31-5509c3f3e695",
+          "phase": "new",
+          "buildHash": "4becd5154af13ed47ef301c878f56ca0eeb4c7bcd69cfbdf22b8f121d50a0e56",
+          "challenge": "49d62680-96ef-4803-a434-90c0668ade5a"
+        },
+        "backendConfirmed": true,
+        "executedAppId": "notes-v2-bad",
+        "expectedAppId": "notes-v2-bad",
+        "appConfirmed": true,
+        "origin": "http://127.0.0.1:62783",
+        "profileId": "upgrade-3da5a4d5-b723-4137-ab53-38f10ecad761",
+        "userDataDirConfirmed": true,
+        "serviceWorkers": {
+          "controller": null,
+          "registrations": []
+        }
+      }
+    ],
+    "checks": {
+      "seed": [
+        {
+          "id": "seed.ids.note-001",
+          "subject": "indexedDB/notes/notes/note-001/id",
+          "actual": "note-001",
+          "expected": "note-001",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-002",
+          "subject": "indexedDB/notes/notes/note-002/id",
+          "actual": "note-002",
+          "expected": "note-002",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-003",
+          "subject": "indexedDB/notes/notes/note-003/id",
+          "actual": "note-003",
+          "expected": "note-003",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-004",
+          "subject": "indexedDB/notes/notes/note-004/id",
+          "actual": "note-004",
+          "expected": "note-004",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-005",
+          "subject": "indexedDB/notes/notes/note-005/id",
+          "actual": "note-005",
+          "expected": "note-005",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-006",
+          "subject": "indexedDB/notes/notes/note-006/id",
+          "actual": "note-006",
+          "expected": "note-006",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-007",
+          "subject": "indexedDB/notes/notes/note-007/id",
+          "actual": "note-007",
+          "expected": "note-007",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-008",
+          "subject": "indexedDB/notes/notes/note-008/id",
+          "actual": "note-008",
+          "expected": "note-008",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-009",
+          "subject": "indexedDB/notes/notes/note-009/id",
+          "actual": "note-009",
+          "expected": "note-009",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-010",
+          "subject": "indexedDB/notes/notes/note-010/id",
+          "actual": "note-010",
+          "expected": "note-010",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-011",
+          "subject": "indexedDB/notes/notes/note-011/id",
+          "actual": "note-011",
+          "expected": "note-011",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-012",
+          "subject": "indexedDB/notes/notes/note-012/id",
+          "actual": "note-012",
+          "expected": "note-012",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-013",
+          "subject": "indexedDB/notes/notes/note-013/id",
+          "actual": "note-013",
+          "expected": "note-013",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-014",
+          "subject": "indexedDB/notes/notes/note-014/id",
+          "actual": "note-014",
+          "expected": "note-014",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-015",
+          "subject": "indexedDB/notes/notes/note-015/id",
+          "actual": "note-015",
+          "expected": "note-015",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-016",
+          "subject": "indexedDB/notes/notes/note-016/id",
+          "actual": "note-016",
+          "expected": "note-016",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-017",
+          "subject": "indexedDB/notes/notes/note-017/id",
+          "actual": "note-017",
+          "expected": "note-017",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-018",
+          "subject": "indexedDB/notes/notes/note-018/id",
+          "actual": "note-018",
+          "expected": "note-018",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-019",
+          "subject": "indexedDB/notes/notes/note-019/id",
+          "actual": "note-019",
+          "expected": "note-019",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.ids.note-020",
+          "subject": "indexedDB/notes/notes/note-020/id",
+          "actual": "note-020",
+          "expected": "note-020",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-001",
+          "subject": "indexedDB/notes/notes/note-001",
+          "actual": {
+            "id": "note-001",
+            "text": "Note 01: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-01T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-001",
+            "text": "Note 01: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-01T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-002",
+          "subject": "indexedDB/notes/notes/note-002",
+          "actual": {
+            "id": "note-002",
+            "text": "Note 02: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-02T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-002",
+            "text": "Note 02: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-02T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-003",
+          "subject": "indexedDB/notes/notes/note-003",
+          "actual": {
+            "id": "note-003",
+            "text": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+            "createdAt": "2026-01-03T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-003",
+            "text": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+            "createdAt": "2026-01-03T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-004",
+          "subject": "indexedDB/notes/notes/note-004",
+          "actual": {
+            "id": "note-004",
+            "text": "Note 04: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-04T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-004",
+            "text": "Note 04: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-04T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-005",
+          "subject": "indexedDB/notes/notes/note-005",
+          "actual": {
+            "id": "note-005",
+            "text": "Note 05: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-05T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-005",
+            "text": "Note 05: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-05T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-006",
+          "subject": "indexedDB/notes/notes/note-006",
+          "actual": {
+            "id": "note-006",
+            "text": "Note 06: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-06T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-006",
+            "text": "Note 06: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-06T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-007",
+          "subject": "indexedDB/notes/notes/note-007",
+          "actual": {
+            "id": "note-007",
+            "text": "Note 07: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-07T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-007",
+            "text": "Note 07: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-07T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-008",
+          "subject": "indexedDB/notes/notes/note-008",
+          "actual": {
+            "id": "note-008",
+            "text": "Note 08: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-08T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-008",
+            "text": "Note 08: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-08T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-009",
+          "subject": "indexedDB/notes/notes/note-009",
+          "actual": {
+            "id": "note-009",
+            "text": "Note 09: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-09T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-009",
+            "text": "Note 09: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-09T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-010",
+          "subject": "indexedDB/notes/notes/note-010",
+          "actual": {
+            "id": "note-010",
+            "text": "Note 10: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-10T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-010",
+            "text": "Note 10: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-10T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-011",
+          "subject": "indexedDB/notes/notes/note-011",
+          "actual": {
+            "id": "note-011",
+            "text": "Note 11: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-11T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-011",
+            "text": "Note 11: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-11T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-012",
+          "subject": "indexedDB/notes/notes/note-012",
+          "actual": {
+            "id": "note-012",
+            "text": "Note 12: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-12T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-012",
+            "text": "Note 12: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-12T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-013",
+          "subject": "indexedDB/notes/notes/note-013",
+          "actual": {
+            "id": "note-013",
+            "text": "Note 13: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-13T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-013",
+            "text": "Note 13: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-13T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-014",
+          "subject": "indexedDB/notes/notes/note-014",
+          "actual": {
+            "id": "note-014",
+            "text": "Note 14: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-14T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-014",
+            "text": "Note 14: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-14T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-015",
+          "subject": "indexedDB/notes/notes/note-015",
+          "actual": {
+            "id": "note-015",
+            "text": "Note 15: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-15T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-015",
+            "text": "Note 15: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-15T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-016",
+          "subject": "indexedDB/notes/notes/note-016",
+          "actual": {
+            "id": "note-016",
+            "text": "Note 16: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-16T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-016",
+            "text": "Note 16: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-16T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-017",
+          "subject": "indexedDB/notes/notes/note-017",
+          "actual": {
+            "id": "note-017",
+            "text": "Note 17: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-17T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-017",
+            "text": "Note 17: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-17T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-018",
+          "subject": "indexedDB/notes/notes/note-018",
+          "actual": {
+            "id": "note-018",
+            "text": "Note 18: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-18T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-018",
+            "text": "Note 18: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-18T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-019",
+          "subject": "indexedDB/notes/notes/note-019",
+          "actual": {
+            "id": "note-019",
+            "text": "Note 19: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-19T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "expected": {
+            "id": "note-019",
+            "text": "Note 19: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-19T10:00:00Z",
+            "tagIds": [
+              "tag-work"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.value.note-020",
+          "subject": "indexedDB/notes/notes/note-020",
+          "actual": {
+            "id": "note-020",
+            "text": "Note 20: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-20T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "expected": {
+            "id": "note-020",
+            "text": "Note 20: Preserve this text — Привет, 世界.",
+            "createdAt": "2026-01-20T10:00:00Z",
+            "tagIds": [
+              "tag-personal"
+            ]
+          },
+          "explanation": "Seed must match the independent synthetic application specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.tags",
+          "subject": "indexedDB/notes/tags",
+          "actual": [
+            {
+              "id": "tag-personal",
+              "name": "Personal"
+            },
+            {
+              "id": "tag-work",
+              "name": "Work"
+            }
+          ],
+          "expected": [
+            {
+              "id": "tag-personal",
+              "name": "Personal"
+            },
+            {
+              "id": "tag-work",
+              "name": "Work"
+            }
+          ],
+          "explanation": "Seed tags must match the declared specification.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.scratch",
+          "subject": "indexedDB/notes/scratch",
+          "actual": [
+            {
+              "id": "draft-temp",
+              "text": "Intentionally transient"
+            }
+          ],
+          "expected": [
+            {
+              "id": "draft-temp",
+              "text": "Intentionally transient"
+            }
+          ],
+          "explanation": "The OLD app persists its transient draft.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.preferences",
+          "subject": "localStorage/ui-prefs",
+          "actual": {
+            "state": "present",
+            "value": {
+              "theme": "paper",
+              "fontSize": 16,
+              "language": "en"
+            }
+          },
+          "expected": {
+            "state": "present",
+            "value": {
+              "theme": "paper",
+              "fontSize": 16,
+              "language": "en"
+            }
+          },
+          "explanation": "The OLD app persists its preference values.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "seed.new-key",
+          "subject": "localStorage/preferences",
+          "actual": "missing",
+          "expected": "missing",
+          "explanation": "The new preference key does not exist yet.",
+          "outcome": "PASS"
+        }
+      ],
+      "cold": [],
+      "upgrade": [
+        {
+          "id": "upgrade.ids.note-001",
+          "subject": "indexedDB/notes/notes/note-001/id",
+          "actual": "note-001",
+          "expected": "note-001",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.ids.note-002",
+          "subject": "indexedDB/notes/notes/note-002/id",
+          "actual": "note-002",
+          "expected": "note-002",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.ids.note-003",
+          "subject": "indexedDB/notes/notes/note-003/id",
+          "actual": "note-003",
+          "expected": "note-003",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.ids.note-004",
+          "subject": "indexedDB/notes/notes/note-004/id",
+          "actual": "note-004",
+          "expected": "note-004",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.ids.note-005",
+          "subject": "indexedDB/notes/notes/note-005/id",
+          "actual": "note-005",
+          "expected": "note-005",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.ids.note-006",
+          "subject": "indexedDB/notes/notes/note-006/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-006",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-007",
+          "subject": "indexedDB/notes/notes/note-007/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-007",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-008",
+          "subject": "indexedDB/notes/notes/note-008/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-008",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-009",
+          "subject": "indexedDB/notes/notes/note-009/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-009",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-010",
+          "subject": "indexedDB/notes/notes/note-010/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-010",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-011",
+          "subject": "indexedDB/notes/notes/note-011/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-011",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-012",
+          "subject": "indexedDB/notes/notes/note-012/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-012",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-013",
+          "subject": "indexedDB/notes/notes/note-013/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-013",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-014",
+          "subject": "indexedDB/notes/notes/note-014/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-014",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-015",
+          "subject": "indexedDB/notes/notes/note-015/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-015",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-016",
+          "subject": "indexedDB/notes/notes/note-016/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-016",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-017",
+          "subject": "indexedDB/notes/notes/note-017/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-017",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-018",
+          "subject": "indexedDB/notes/notes/note-018/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-018",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-019",
+          "subject": "indexedDB/notes/notes/note-019/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-019",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.ids.note-020",
+          "subject": "indexedDB/notes/notes/note-020/id",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "note-020",
+          "explanation": "This stable application ID must survive.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-001.createdAt",
+          "subject": "indexedDB/notes/notes/note-001/createdAt",
+          "actual": "2026-01-01T10:00:00Z",
+          "expected": "2026-01-01T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-001.tagIds",
+          "subject": "indexedDB/notes/notes/note-001/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-002.createdAt",
+          "subject": "indexedDB/notes/notes/note-002/createdAt",
+          "actual": "2026-01-02T10:00:00Z",
+          "expected": "2026-01-02T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-002.tagIds",
+          "subject": "indexedDB/notes/notes/note-002/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-003.createdAt",
+          "subject": "indexedDB/notes/notes/note-003/createdAt",
+          "actual": "2026-01-03T10:00:00Z",
+          "expected": "2026-01-03T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-003.tagIds",
+          "subject": "indexedDB/notes/notes/note-003/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-004.createdAt",
+          "subject": "indexedDB/notes/notes/note-004/createdAt",
+          "actual": "2026-01-04T10:00:00Z",
+          "expected": "2026-01-04T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-004.tagIds",
+          "subject": "indexedDB/notes/notes/note-004/tagIds",
+          "actual": [
+            "tag-personal"
+          ],
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-005.createdAt",
+          "subject": "indexedDB/notes/notes/note-005/createdAt",
+          "actual": "2026-01-05T10:00:00Z",
+          "expected": "2026-01-05T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-005.tagIds",
+          "subject": "indexedDB/notes/notes/note-005/tagIds",
+          "actual": [
+            "tag-work"
+          ],
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.fields.note-006.createdAt",
+          "subject": "indexedDB/notes/notes/note-006/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-06T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-006.tagIds",
+          "subject": "indexedDB/notes/notes/note-006/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-007.createdAt",
+          "subject": "indexedDB/notes/notes/note-007/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-07T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-007.tagIds",
+          "subject": "indexedDB/notes/notes/note-007/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-008.createdAt",
+          "subject": "indexedDB/notes/notes/note-008/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-08T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-008.tagIds",
+          "subject": "indexedDB/notes/notes/note-008/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-009.createdAt",
+          "subject": "indexedDB/notes/notes/note-009/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-09T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-009.tagIds",
+          "subject": "indexedDB/notes/notes/note-009/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-010.createdAt",
+          "subject": "indexedDB/notes/notes/note-010/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-10T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-010.tagIds",
+          "subject": "indexedDB/notes/notes/note-010/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-011.createdAt",
+          "subject": "indexedDB/notes/notes/note-011/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-11T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-011.tagIds",
+          "subject": "indexedDB/notes/notes/note-011/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-012.createdAt",
+          "subject": "indexedDB/notes/notes/note-012/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-12T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-012.tagIds",
+          "subject": "indexedDB/notes/notes/note-012/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-013.createdAt",
+          "subject": "indexedDB/notes/notes/note-013/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-13T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-013.tagIds",
+          "subject": "indexedDB/notes/notes/note-013/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-014.createdAt",
+          "subject": "indexedDB/notes/notes/note-014/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-14T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-014.tagIds",
+          "subject": "indexedDB/notes/notes/note-014/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-015.createdAt",
+          "subject": "indexedDB/notes/notes/note-015/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-15T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-015.tagIds",
+          "subject": "indexedDB/notes/notes/note-015/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-016.createdAt",
+          "subject": "indexedDB/notes/notes/note-016/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-16T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-016.tagIds",
+          "subject": "indexedDB/notes/notes/note-016/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-017.createdAt",
+          "subject": "indexedDB/notes/notes/note-017/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-17T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-017.tagIds",
+          "subject": "indexedDB/notes/notes/note-017/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-018.createdAt",
+          "subject": "indexedDB/notes/notes/note-018/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-18T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-018.tagIds",
+          "subject": "indexedDB/notes/notes/note-018/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-019.createdAt",
+          "subject": "indexedDB/notes/notes/note-019/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-19T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-019.tagIds",
+          "subject": "indexedDB/notes/notes/note-019/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-work"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-020.createdAt",
+          "subject": "indexedDB/notes/notes/note-020/createdAt",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "2026-01-20T10:00:00Z",
+          "explanation": "Preserve createdAt for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.fields.note-020.tagIds",
+          "subject": "indexedDB/notes/notes/note-020/tagIds",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": [
+            "tag-personal"
+          ],
+          "explanation": "Preserve tagIds for the same ID.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.body.note-001",
+          "subject": "indexedDB/notes/notes/note-001/body",
+          "actual": "Note 01: Preserve this text — Привет, 世界.",
+          "expected": "Note 01: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.old-field.note-001",
+          "subject": "indexedDB/notes/notes/note-001/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-002",
+          "subject": "indexedDB/notes/notes/note-002/body",
+          "actual": "Note 02: Preserve this text — Привет, 世界.",
+          "expected": "Note 02: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.old-field.note-002",
+          "subject": "indexedDB/notes/notes/note-002/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-003",
+          "subject": "indexedDB/notes/notes/note-003/body",
+          "actual": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+          "expected": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.old-field.note-003",
+          "subject": "indexedDB/notes/notes/note-003/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-004",
+          "subject": "indexedDB/notes/notes/note-004/body",
+          "actual": "Note 04: Preserve this text — Привет, 世界.",
+          "expected": "Note 04: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.old-field.note-004",
+          "subject": "indexedDB/notes/notes/note-004/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-005",
+          "subject": "indexedDB/notes/notes/note-005/body",
+          "actual": "Note 05: Preserve this text — Привет, 世界.",
+          "expected": "Note 05: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.old-field.note-005",
+          "subject": "indexedDB/notes/notes/note-005/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-006",
+          "subject": "indexedDB/notes/notes/note-006/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 06: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-006",
+          "subject": "indexedDB/notes/notes/note-006/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-007",
+          "subject": "indexedDB/notes/notes/note-007/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 07: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-007",
+          "subject": "indexedDB/notes/notes/note-007/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-008",
+          "subject": "indexedDB/notes/notes/note-008/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 08: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-008",
+          "subject": "indexedDB/notes/notes/note-008/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-009",
+          "subject": "indexedDB/notes/notes/note-009/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 09: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-009",
+          "subject": "indexedDB/notes/notes/note-009/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-010",
+          "subject": "indexedDB/notes/notes/note-010/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 10: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-010",
+          "subject": "indexedDB/notes/notes/note-010/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-011",
+          "subject": "indexedDB/notes/notes/note-011/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 11: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-011",
+          "subject": "indexedDB/notes/notes/note-011/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-012",
+          "subject": "indexedDB/notes/notes/note-012/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 12: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-012",
+          "subject": "indexedDB/notes/notes/note-012/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-013",
+          "subject": "indexedDB/notes/notes/note-013/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 13: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-013",
+          "subject": "indexedDB/notes/notes/note-013/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-014",
+          "subject": "indexedDB/notes/notes/note-014/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 14: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-014",
+          "subject": "indexedDB/notes/notes/note-014/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-015",
+          "subject": "indexedDB/notes/notes/note-015/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 15: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-015",
+          "subject": "indexedDB/notes/notes/note-015/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-016",
+          "subject": "indexedDB/notes/notes/note-016/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 16: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-016",
+          "subject": "indexedDB/notes/notes/note-016/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-017",
+          "subject": "indexedDB/notes/notes/note-017/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 17: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-017",
+          "subject": "indexedDB/notes/notes/note-017/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-018",
+          "subject": "indexedDB/notes/notes/note-018/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 18: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-018",
+          "subject": "indexedDB/notes/notes/note-018/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-019",
+          "subject": "indexedDB/notes/notes/note-019/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 19: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-019",
+          "subject": "indexedDB/notes/notes/note-019/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.body.note-020",
+          "subject": "indexedDB/notes/notes/note-020/body",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": "Note 20: Preserve this text — Привет, 世界.",
+          "explanation": "Rename text → body while preserving the exact content.",
+          "outcome": "VIOLATION"
+        },
+        {
+          "id": "upgrade.old-field.note-020",
+          "subject": "indexedDB/notes/notes/note-020/text",
+          "actual": {
+            "state": "missing"
+          },
+          "expected": {
+            "state": "missing"
+          },
+          "explanation": "The obsolete text field is removed by the declared migration.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.tags",
+          "subject": "indexedDB/notes/tags",
+          "actual": [
+            {
+              "id": "tag-personal",
+              "name": "Personal"
+            },
+            {
+              "id": "tag-work",
+              "name": "Work"
+            }
+          ],
+          "expected": [
+            {
+              "id": "tag-personal",
+              "name": "Personal"
+            },
+            {
+              "id": "tag-work",
+              "name": "Work"
+            }
+          ],
+          "explanation": "Preserve tag IDs and names.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.references.note-001",
+          "subject": "indexedDB/notes/notes/note-001/tagIds",
+          "actual": [],
+          "expected": [],
+          "explanation": "Every referenced ID must resolve to a preserved record.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.references.note-002",
+          "subject": "indexedDB/notes/notes/note-002/tagIds",
+          "actual": [],
+          "expected": [],
+          "explanation": "Every referenced ID must resolve to a preserved record.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.references.note-003",
+          "subject": "indexedDB/notes/notes/note-003/tagIds",
+          "actual": [],
+          "expected": [],
+          "explanation": "Every referenced ID must resolve to a preserved record.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.references.note-004",
+          "subject": "indexedDB/notes/notes/note-004/tagIds",
+          "actual": [],
+          "expected": [],
+          "explanation": "Every referenced ID must resolve to a preserved record.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.references.note-005",
+          "subject": "indexedDB/notes/notes/note-005/tagIds",
+          "actual": [],
+          "expected": [],
+          "explanation": "Every referenced ID must resolve to a preserved record.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.preferences",
+          "subject": "localStorage/preferences",
+          "actual": {
+            "state": "present",
+            "value": {
+              "theme": "paper",
+              "fontSize": 16,
+              "language": "en"
+            }
+          },
+          "expected": {
+            "state": "present",
+            "value": {
+              "theme": "paper",
+              "fontSize": 16,
+              "language": "en"
+            }
+          },
+          "explanation": "Move the preference value to its new key unchanged.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.old-key",
+          "subject": "localStorage/ui-prefs",
+          "actual": "missing",
+          "expected": "missing",
+          "explanation": "Removing the old key is intentional after successful transfer.",
+          "outcome": "PASS"
+        },
+        {
+          "id": "upgrade.scratch",
+          "subject": "indexedDB/notes/scratch",
+          "actual": "missing",
+          "expected": "missing",
+          "explanation": "Transient scratch data is intentionally removed.",
+          "outcome": "PASS"
+        }
+      ]
+    },
+    "closure": [
+      {
+        "stage": "old",
+        "disconnected": true,
+        "processExited": true,
+        "forced": false
+      },
+      {
+        "stage": "cleanup",
+        "disconnected": true,
+        "processExited": true,
+        "forced": false
+      }
+    ],
+    "cleanup": {
+      "browserClosed": true,
+      "profileRemoved": true
+    },
+    "before": {
+      "capturedAt": "2026-10-11T19:39:44.204Z",
+      "origin": "http://127.0.0.1:62783",
+      "complete": true,
+      "localStorage": {
+        "ui-prefs": {
+          "state": "present",
+          "value": "{\"theme\":\"paper\",\"fontSize\":16,\"language\":\"en\"}"
+        },
+        "preferences": {
+          "state": "missing"
+        }
+      },
+      "indexedDB": {
+        "notes": {
+          "state": "present",
+          "version": 1,
+          "stores": {
+            "notes": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "note-001",
+                  "value": {
+                    "id": "note-001",
+                    "text": "Note 01: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-01T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-002",
+                  "value": {
+                    "id": "note-002",
+                    "text": "Note 02: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-02T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-003",
+                  "value": {
+                    "id": "note-003",
+                    "text": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+                    "createdAt": "2026-01-03T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-004",
+                  "value": {
+                    "id": "note-004",
+                    "text": "Note 04: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-04T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-005",
+                  "value": {
+                    "id": "note-005",
+                    "text": "Note 05: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-05T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-006",
+                  "value": {
+                    "id": "note-006",
+                    "text": "Note 06: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-06T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-007",
+                  "value": {
+                    "id": "note-007",
+                    "text": "Note 07: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-07T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-008",
+                  "value": {
+                    "id": "note-008",
+                    "text": "Note 08: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-08T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-009",
+                  "value": {
+                    "id": "note-009",
+                    "text": "Note 09: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-09T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-010",
+                  "value": {
+                    "id": "note-010",
+                    "text": "Note 10: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-10T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-011",
+                  "value": {
+                    "id": "note-011",
+                    "text": "Note 11: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-11T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-012",
+                  "value": {
+                    "id": "note-012",
+                    "text": "Note 12: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-12T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-013",
+                  "value": {
+                    "id": "note-013",
+                    "text": "Note 13: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-13T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-014",
+                  "value": {
+                    "id": "note-014",
+                    "text": "Note 14: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-14T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-015",
+                  "value": {
+                    "id": "note-015",
+                    "text": "Note 15: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-15T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-016",
+                  "value": {
+                    "id": "note-016",
+                    "text": "Note 16: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-16T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-017",
+                  "value": {
+                    "id": "note-017",
+                    "text": "Note 17: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-17T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-018",
+                  "value": {
+                    "id": "note-018",
+                    "text": "Note 18: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-18T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-019",
+                  "value": {
+                    "id": "note-019",
+                    "text": "Note 19: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-19T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ]
+                  }
+                },
+                {
+                  "key": "note-020",
+                  "value": {
+                    "id": "note-020",
+                    "text": "Note 20: Preserve this text — Привет, 世界.",
+                    "createdAt": "2026-01-20T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ]
+                  }
+                }
+              ]
+            },
+            "tags": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "tag-personal",
+                  "value": {
+                    "id": "tag-personal",
+                    "name": "Personal"
+                  }
+                },
+                {
+                  "key": "tag-work",
+                  "value": {
+                    "id": "tag-work",
+                    "name": "Work"
+                  }
+                }
+              ]
+            },
+            "scratch": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "draft-temp",
+                  "value": {
+                    "id": "draft-temp",
+                    "text": "Intentionally transient"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "problems": []
+    },
+    "seedFingerprint": {
+      "digest": "18286827850e5bfa55147866cbab1ce6150720ee18c0497459230db1ac2d9c51",
+      "normalization": [
+        "Sort notes and tags by stable application ID using English collation.",
+        "Keep fixed createdAt strings, text, tag IDs and preferences unchanged.",
+        "Exclude capture time and independent physical profile identity."
+      ]
+    },
+    "after": {
+      "capturedAt": "2026-10-11T19:39:47.948Z",
+      "origin": "http://127.0.0.1:62783",
+      "complete": true,
+      "localStorage": {
+        "ui-prefs": {
+          "state": "missing"
+        },
+        "preferences": {
+          "state": "present",
+          "value": "{\"theme\":\"paper\",\"fontSize\":16,\"language\":\"en\"}"
+        }
+      },
+      "indexedDB": {
+        "notes": {
+          "state": "present",
+          "version": 2,
+          "stores": {
+            "notes": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "note-001",
+                  "value": {
+                    "id": "note-001",
+                    "createdAt": "2026-01-01T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ],
+                    "body": "Note 01: Preserve this text — Привет, 世界."
+                  }
+                },
+                {
+                  "key": "note-002",
+                  "value": {
+                    "id": "note-002",
+                    "createdAt": "2026-01-02T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ],
+                    "body": "Note 02: Preserve this text — Привет, 世界."
+                  }
+                },
+                {
+                  "key": "note-003",
+                  "value": {
+                    "id": "note-003",
+                    "createdAt": "2026-01-03T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ],
+                    "body": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text"
+                  }
+                },
+                {
+                  "key": "note-004",
+                  "value": {
+                    "id": "note-004",
+                    "createdAt": "2026-01-04T10:00:00Z",
+                    "tagIds": [
+                      "tag-personal"
+                    ],
+                    "body": "Note 04: Preserve this text — Привет, 世界."
+                  }
+                },
+                {
+                  "key": "note-005",
+                  "value": {
+                    "id": "note-005",
+                    "createdAt": "2026-01-05T10:00:00Z",
+                    "tagIds": [
+                      "tag-work"
+                    ],
+                    "body": "Note 05: Preserve this text — Привет, 世界."
+                  }
+                }
+              ]
+            },
+            "tags": {
+              "state": "present",
+              "records": [
+                {
+                  "key": "tag-personal",
+                  "value": {
+                    "id": "tag-personal",
+                    "name": "Personal"
+                  }
+                },
+                {
+                  "key": "tag-work",
+                  "value": {
+                    "id": "tag-work",
+                    "name": "Work"
+                  }
+                }
+              ]
+            },
+            "scratch": {
+              "state": "missing"
+            }
+          }
+        }
+      },
+      "problems": []
+    }
+  }
+}

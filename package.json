@@ -1,0 +1,68 @@
+{
+  "name": "originrehearsal",
+  "version": "0.1.0",
+  "description": "Rehearse web-app upgrades with retained browser profiles and explicit data contracts.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "bin": {
+    "originrehearsal": "dist/cli/main.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/sdk/index.d.ts",
+      "import": "./dist/sdk/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "examples/notes",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/build-example.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests scripts examples/notes/*.mjs",
+    "test:unit": "tsc && node --test --test-concurrency=1 tests/unit/*.test.mjs",
+    "test:e2e": "node --test --test-concurrency=1 tests/e2e/*.test.mjs",
+    "test:consumer": "node tests/consumer/run.mjs",
+    "demo:media": "node scripts/record-demo.mjs",
+    "verify:ui": "node scripts/verify-ui.mjs",
+    "audit:publication": "node scripts/audit-publication.mjs",
+    "verify:site": "node scripts/verify-site.mjs"
+  },
+  "dependencies": {
+    "commander": "15.0.0",
+    "playwright": "1.64.0",
+    "zod": "4.6.6"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "eslint": "10.12.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikonyaa/originrehearsal.git"
+  },
+  "homepage": "https://github.com/mikonyaa/originrehearsal#readme",
+  "bugs": {
+    "url": "https://github.com/mikonyaa/originrehearsal/issues"
+  },
+  "keywords": [
+    "playwright",
+    "indexeddb",
+    "localstorage",
+    "migrations",
+    "browser-testing",
+    "local-first",
+    "cli"
+  ]
+}

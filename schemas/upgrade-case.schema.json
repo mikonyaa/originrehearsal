@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "old": {
+      "type": "object",
+      "properties": {
+        "dir": {
+          "type": "string",
+          "minLength": 1
+        },
+        "buildId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "dir",
+        "buildId"
+      ],
+      "additionalProperties": false
+    },
+    "new": {
+      "type": "object",
+      "properties": {
+        "dir": {
+          "type": "string",
+          "minLength": 1
+        },
+        "buildId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "dir",
+        "buildId"
+      ],
+      "additionalProperties": false
+    },
+    "app": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "default": "/",
+          "type": "string",
+          "format": "starts_with",
+          "pattern": "^\\/.*"
+        },
+        "buildSelector": {
+          "type": "string",
+          "minLength": 1
+        },
+        "buildAttribute": {
+          "type": "string",
+          "minLength": 1
+        },
+        "readySelector": {
+          "type": "string",
+          "minLength": 1
+        },
+        "errorSelector": {
+          "type": "string",
+          "minLength": 1
+        },
+        "errorAttribute": {
+          "default": "data-app-error",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "path",
+        "buildSelector",
+        "buildAttribute",
+        "readySelector",
+        "errorAttribute"
+      ],
+      "additionalProperties": false
+    },
+    "hooks": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seedInputs": {
+      "$ref": "#/$defs/__schema0"
+    },
+    "storage": {
+      "type": "object",
+      "properties": {
+        "localStorageKeys": {
+          "maxItems": 100,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "indexedDB": {
+          "maxItems": 50,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "stores": {
+                "minItems": 1,
+                "maxItems": 100,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                }
+              }
+            },
+            "required": [
+              "name",
+              "stores"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "localStorageKeys",
+        "indexedDB"
+      ],
+      "additionalProperties": false
+    },
+    "limits": {
+      "default": {
+        "phaseTimeoutMs": 30000,
+        "maxRecordsPerStore": 1000,
+        "maxSnapshotBytes": 5000000
+      },
+      "type": "object",
+      "properties": {
+        "phaseTimeoutMs": {
+          "default": 30000,
+          "type": "integer",
+          "minimum": 500,
+          "maximum": 120000
+        },
+        "maxRecordsPerStore": {
+          "default": 1000,
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "maxSnapshotBytes": {
+          "default": 5000000,
+          "type": "integer",
+          "minimum": 256,
+          "maximum": 50000000
+        }
+      },
+      "required": [
+        "phaseTimeoutMs",
+        "maxRecordsPerStore",
+        "maxSnapshotBytes"
+      ],
+      "additionalProperties": false
+    },
+    "gateway": {
+      "default": {
+        "port": 0,
+        "spaFallback": false
+      },
+      "type": "object",
+      "properties": {
+        "port": {
+          "default": 0,
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "spaFallback": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "port",
+        "spaFallback"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "old",
+    "new",
+    "app",
+    "hooks",
+    "seedInputs",
+    "storage",
+    "limits",
+    "gateway"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema0"
+          }
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/__schema0"
+          }
+        }
+      ]
+    }
+  }
+}

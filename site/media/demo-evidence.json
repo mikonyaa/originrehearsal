@@ -1,0 +1,26 @@
+{
+  "origin": "real runner; no storage restore",
+  "stages": [
+    {
+      "name": "bad",
+      "outcome": "VIOLATION",
+      "coldControl": "PASS",
+      "executedBuild": "notes-v2-bad",
+      "origin": "http://127.0.0.1:62783",
+      "sameProfile": true
+    },
+    {
+      "name": "good",
+      "outcome": "PASS",
+      "coldControl": "PASS",
+      "executedBuild": "notes-v2",
+      "origin": "http://127.0.0.1:62932",
+      "sameProfile": true
+    }
+  ],
+  "freshInstall": "BAD build saved and read a new note through its UI",
+  "media": {
+    "duration": "25.125000",
+    "size": "328469"
+  }
+}

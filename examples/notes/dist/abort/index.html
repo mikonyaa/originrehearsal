@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OriginRehearsal Notes</title><style>
+:root{font:16px/1.6 system-ui,sans-serif;color:#192b38;background:#f4f5f2}body{max-width:1000px;margin:40px auto;padding:0 24px}h1{font-size:32px;line-height:1.2}code,strong{overflow-wrap:anywhere}header{border-bottom:2px solid #234c50;padding-bottom:24px}button{background:#234c50;color:white;border:0;padding:10px 16px;border-radius:4px;font:inherit;cursor:pointer}button:focus-visible,textarea:focus-visible{outline:3px solid #bd7123;outline-offset:3px}textarea{width:100%;max-width:680px;box-sizing:border-box;font:inherit;padding:12px}form{margin:24px 0}label{display:block}ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));list-style:none;padding:0;gap:14px}li{border:1px solid #c5cecb;background:white;padding:16px;overflow-wrap:anywhere}li p{margin:8px 0 0}#error{color:#a01e29}#count{font-size:22px;font-weight:650}@media(max-width:600px){ul{grid-template-columns:1fr}body{margin:24px auto}}</style></head>
+<body><header><p>OriginRehearsal · synthetic application</p><h1>Notes that survive an upgrade</h1><p>Executed build: <code id="build">Waiting for JavaScript</code></p></header>
+<p id="error" role="alert"></p><p id="count">Opening database…</p>
+<button id="seed">Load 20 synthetic notes</button>
+<form id="form"><label for="text">New note</label><textarea id="text" rows="2" required></textarea><p><button type="submit">Save note</button> <span id="saved" role="status"></span></p></form>
+<ul id="notes"></ul><script type="module" src="/app.js"></script></body></html>

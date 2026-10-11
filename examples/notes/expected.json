@@ -1,0 +1,185 @@
+{
+  "notes": [
+    {
+      "id": "note-001",
+      "text": "Note 01: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-01T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-002",
+      "text": "Note 02: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-02T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    },
+    {
+      "id": "note-003",
+      "text": "Note 03: </script><img src=x onerror=alert(1)> & \"quoted\" synthetic text",
+      "createdAt": "2026-01-03T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-004",
+      "text": "Note 04: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-04T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    },
+    {
+      "id": "note-005",
+      "text": "Note 05: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-05T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-006",
+      "text": "Note 06: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-06T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    },
+    {
+      "id": "note-007",
+      "text": "Note 07: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-07T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-008",
+      "text": "Note 08: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-08T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    },
+    {
+      "id": "note-009",
+      "text": "Note 09: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-09T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-010",
+      "text": "Note 10: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-10T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    },
+    {
+      "id": "note-011",
+      "text": "Note 11: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-11T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-012",
+      "text": "Note 12: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-12T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    },
+    {
+      "id": "note-013",
+      "text": "Note 13: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-13T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-014",
+      "text": "Note 14: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-14T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    },
+    {
+      "id": "note-015",
+      "text": "Note 15: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-15T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-016",
+      "text": "Note 16: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-16T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    },
+    {
+      "id": "note-017",
+      "text": "Note 17: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-17T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-018",
+      "text": "Note 18: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-18T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    },
+    {
+      "id": "note-019",
+      "text": "Note 19: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-19T10:00:00Z",
+      "tagIds": [
+        "tag-work"
+      ]
+    },
+    {
+      "id": "note-020",
+      "text": "Note 20: Preserve this text — Привет, 世界.",
+      "createdAt": "2026-01-20T10:00:00Z",
+      "tagIds": [
+        "tag-personal"
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "id": "tag-work",
+      "name": "Work"
+    },
+    {
+      "id": "tag-personal",
+      "name": "Personal"
+    }
+  ],
+  "scratch": [
+    {
+      "id": "draft-temp",
+      "text": "Intentionally transient"
+    }
+  ],
+  "preferences": {
+    "theme": "paper",
+    "fontSize": 16,
+    "language": "en"
+  }
+}
