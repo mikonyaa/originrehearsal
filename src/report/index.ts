@@ -1,5 +1,6 @@
 import { z } from 'zod';
-import type { CheckResult, Leg, UpgradeRun, StorageSnapshot } from '../models.js';
+import type { CheckResult, Leg, UpgradeRun } from '../models.js';
+import { displaySubject, observedValue, storageRows } from './storage.js';
 const outcome = z.enum(['PASS', 'VIOLATION', 'ERROR', 'UNSUPPORTED']);
 const event = z.object({ phase: z.string(), startedAt: z.string(), durationMs: z.number(), outcome, reason: z.string() });
 const check = z.object({ id: z.string(), subject: z.string(), expected: z.json(), actual: z.json(), outcome: z.enum(['PASS', 'VIOLATION']), explanation: z.string() });
@@ -25,22 +26,10 @@ function timeline(title: string, leg: Leg | undefined): string {
 function checksTable(title: string, checks: CheckResult[]): string {
   return `<details class="check-group" open><summary>${escapeHTML(title)} · ${checks.length} checks · ${checks.filter(check => check.outcome === 'VIOLATION').length} violations</summary>${checks.length === 0 ? '<p>No assertions ran.</p>' : `<table class="checks-table"><thead><tr><th>Result / subject</th><th>Expected</th><th>Observed</th></tr></thead><tbody>${checks.map(check => `<tr data-outcome="${check.outcome}"><td data-label="Result / subject">${status(check.outcome)}<p><code>${escapeHTML(check.id)}</code></p><p class="subject">${escapeHTML(check.subject)}</p><p>${escapeHTML(check.explanation)}</p></td><td data-label="Expected"><pre>${json(check.expected)}</pre></td><td data-label="Observed"><pre>${json(check.actual)}</pre></td></tr>`).join('')}</tbody></table>`}</details>`;
 }
-function storageRows(snapshot: StorageSnapshot | undefined): Map<string, unknown> {
-  const result = new Map<string, unknown>();
-  if (!snapshot) return result;
-  for (const [key, value] of Object.entries(snapshot.localStorage)) result.set(`localStorage/${key}`, value);
-  for (const [name, db] of Object.entries(snapshot.indexedDB)) {
-    result.set(`indexedDB/${name}`, db.state === 'present' ? { state: db.state, version: db.version } : db);
-    if (db.state === 'present') for (const [store, observation] of Object.entries(db.stores)) {
-      result.set(`indexedDB/${name}/${store}`, observation.state === 'present' ? { state: 'present', records: observation.records.length } : observation);
-      if (observation.state === 'present') for (const record of observation.records) result.set(`indexedDB/${name}/${store}/${String(record.key)}`, record.value);
-    }
-  }
-  return result;
-}
 function observations(run: UpgradeRun): string {
   const before = storageRows(run.upgrade?.before ?? run.control?.before); const after = storageRows(run.upgrade?.after ?? run.control?.after);
-  return `<details><summary>Selected before / after values (${new Set([...before.keys(), ...after.keys()]).size} subjects)</summary><table class="checks-table"><thead><tr><th>Subject</th><th>Before</th><th>After</th></tr></thead><tbody>${[...new Set([...before.keys(), ...after.keys()])].map(path => `<tr><td data-label="Subject"><code>${escapeHTML(path)}</code></td><td data-label="Before"><pre>${json(before.get(path) ?? { state: 'not-observed' })}</pre></td><td data-label="After"><pre>${json(after.get(path) ?? { state: 'not-observed' })}</pre></td></tr>`).join('')}</tbody></table></details>`;
+  const subjects = new Map([...before, ...after]);
+  return `<details><summary>Selected before / after values (${subjects.size} subjects)</summary><table class="checks-table"><thead><tr><th>Subject</th><th>Before</th><th>After</th></tr></thead><tbody>${[...subjects].map(([id, row]) => `<tr data-storage-subject="${escapeHTML(id)}" data-subject-kind="${row.subject.kind}"><td data-label="Subject"><code>${escapeHTML(displaySubject(row.subject))}</code></td><td data-label="Before" data-observed="${before.has(id)}"><pre>${json(observedValue(before, id))}</pre></td><td data-label="After" data-observed="${after.has(id)}"><pre>${json(observedValue(after, id))}</pre></td></tr>`).join('')}</tbody></table></details>`;
 }
 export function renderHTML(run: UpgradeRun): string {
   const all = [...(run.control?.checks.seed ?? []), ...(run.control?.checks.cold ?? []), ...(run.upgrade?.checks.seed ?? []), ...(run.upgrade?.checks.upgrade ?? [])];

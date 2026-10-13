@@ -7,6 +7,7 @@ import { promisify } from 'node:util';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
+import { verifyTypedConsumer } from './typed-keys.mjs';
 const exec = promisify(execFile);
 const root = fileURLToPath(new URL('../../', import.meta.url));
 await mkdir(join(root, 'artifacts/package'), { recursive: true });
@@ -17,7 +18,7 @@ if (!archive) {
 }
 archive = resolve(archive);
 const bytes = await readFile(archive); assert.equal(bytes[0], 0x1f); assert.equal(bytes[1], 0x8b);
-const consumer = await mkdtemp(join(tmpdir(), 'originrehearsal-consumer-'));
+const consumer = await mkdtemp(join(process.env.ORIGINREHEARSAL_CONSUMER_ROOT ?? tmpdir(), 'originrehearsal-consumer-'));
 await writeFile(join(consumer, 'package.json'), JSON.stringify({ name: 'originrehearsal-verified-consumer', private: true, type: 'module' }));
 await exec('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', archive], { cwd: consumer, maxBuffer: 5_000_000 });
 const binary = join(consumer, 'node_modules/.bin/originrehearsal');
@@ -53,7 +54,9 @@ try {
   assert.equal(await page.locator('tr[data-outcome="VIOLATION"]:visible').count() > 0, true);
   assert.equal(await page.locator('img').count(), 0); assert.equal(network, 0);
 } finally { await browser.close(); }
+const typedEvidence = await verifyTypedConsumer({ consumer, archive, evidenceDir: join(consumer, 'typed-key-evidence') });
 const record = { outcome: 'PASS', archiveSha256: createHash('sha256').update(bytes).digest('hex'), install: 'npm install --ignore-scripts (no link, workspace symlinks or NODE_PATH)', node: process.version, playwright: installer.playwright, chromium: doctor.chromium, os: `${platform()} ${arch()}`, checks: ['installed binary version', 'real doctor', 'pinned browser installer', 'standalone Unicode/space init', 'real GOOD/BAD/cold scenarios', 'real installed demo', '.mjs SDK import', 'offline HTML controls and no network'], results };
+record.typedKeys = { outcome: typedEvidence.outcome, results: typedEvidence.results, runs: typedEvidence.runs };
 await writeFile(join(root, 'artifacts/package/consumer-result.json'), JSON.stringify(record, null, 2) + '\n');
 console.log(JSON.stringify(record, null, 2));
 console.error(`Consumer evidence retained at ${consumer}`);

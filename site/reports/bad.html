@@ -1254,260 +1254,260 @@ h1{overflow-wrap:anywhere}
     &quot;ownedRootRemoved&quot;: true
   }
 }</pre></details></section>
-<section><h2>Storage observations</h2><details><summary>Selected before / after values (29 subjects)</summary><table class="checks-table"><thead><tr><th>Subject</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td data-label="Subject"><code>localStorage/ui-prefs</code></td><td data-label="Before"><pre>{
+<section><h2>Storage observations</h2><details><summary>Selected before / after values (29 subjects)</summary><table class="checks-table"><thead><tr><th>Subject</th><th>Before</th><th>After</th></tr></thead><tbody><tr data-storage-subject="[&quot;localStorage&quot;,&quot;ui-prefs&quot;]" data-subject-kind="localStorage"><td data-label="Subject"><code>localStorage/&quot;ui-prefs&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;state&quot;: &quot;present&quot;,
   &quot;value&quot;: &quot;{\&quot;theme\&quot;:\&quot;paper\&quot;,\&quot;fontSize\&quot;:16,\&quot;language\&quot;:\&quot;en\&quot;}&quot;
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;state&quot;: &quot;missing&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>localStorage/preferences</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;localStorage&quot;,&quot;preferences&quot;]" data-subject-kind="localStorage"><td data-label="Subject"><code>localStorage/&quot;preferences&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;state&quot;: &quot;missing&quot;
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;state&quot;: &quot;present&quot;,
   &quot;value&quot;: &quot;{\&quot;theme\&quot;:\&quot;paper\&quot;,\&quot;fontSize\&quot;:16,\&quot;language\&quot;:\&quot;en\&quot;}&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;database&quot;,&quot;notes&quot;]" data-subject-kind="database"><td data-label="Subject"><code>indexedDB/&quot;notes&quot; [database]</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;state&quot;: &quot;present&quot;,
   &quot;version&quot;: 1
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;state&quot;: &quot;present&quot;,
   &quot;version&quot;: 2
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;store&quot;,&quot;notes&quot;,&quot;notes&quot;]" data-subject-kind="store"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot; [store]</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;state&quot;: &quot;present&quot;,
   &quot;records&quot;: 20
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;state&quot;: &quot;present&quot;,
   &quot;records&quot;: 5
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-001</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-001&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-001&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-001&quot;,
   &quot;text&quot;: &quot;Note 01: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-01T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-001&quot;,
   &quot;createdAt&quot;: &quot;2026-01-01T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ],
   &quot;body&quot;: &quot;Note 01: Preserve this text — Привет, 世界.&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-002</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-002&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-002&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-002&quot;,
   &quot;text&quot;: &quot;Note 02: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-02T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-002&quot;,
   &quot;createdAt&quot;: &quot;2026-01-02T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ],
   &quot;body&quot;: &quot;Note 02: Preserve this text — Привет, 世界.&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-003</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-003&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-003&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-003&quot;,
   &quot;text&quot;: &quot;Note 03: &lt;/script&gt;&lt;img src=x onerror=alert(1)&gt; &amp; \&quot;quoted\&quot; synthetic text&quot;,
   &quot;createdAt&quot;: &quot;2026-01-03T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-003&quot;,
   &quot;createdAt&quot;: &quot;2026-01-03T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ],
   &quot;body&quot;: &quot;Note 03: &lt;/script&gt;&lt;img src=x onerror=alert(1)&gt; &amp; \&quot;quoted\&quot; synthetic text&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-004</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-004&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-004&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-004&quot;,
   &quot;text&quot;: &quot;Note 04: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-04T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-004&quot;,
   &quot;createdAt&quot;: &quot;2026-01-04T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ],
   &quot;body&quot;: &quot;Note 04: Preserve this text — Привет, 世界.&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-005</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-005&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-005&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-005&quot;,
   &quot;text&quot;: &quot;Note 05: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-05T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-005&quot;,
   &quot;createdAt&quot;: &quot;2026-01-05T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ],
   &quot;body&quot;: &quot;Note 05: Preserve this text — Привет, 世界.&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-006</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-006&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-006&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-006&quot;,
   &quot;text&quot;: &quot;Note 06: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-06T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-007</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-007&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-007&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-007&quot;,
   &quot;text&quot;: &quot;Note 07: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-07T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-008</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-008&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-008&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-008&quot;,
   &quot;text&quot;: &quot;Note 08: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-08T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-009</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-009&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-009&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-009&quot;,
   &quot;text&quot;: &quot;Note 09: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-09T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-010</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-010&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-010&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-010&quot;,
   &quot;text&quot;: &quot;Note 10: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-10T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-011</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-011&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-011&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-011&quot;,
   &quot;text&quot;: &quot;Note 11: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-11T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-012</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-012&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-012&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-012&quot;,
   &quot;text&quot;: &quot;Note 12: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-12T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-013</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-013&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-013&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-013&quot;,
   &quot;text&quot;: &quot;Note 13: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-13T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-014</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-014&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-014&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-014&quot;,
   &quot;text&quot;: &quot;Note 14: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-14T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-015</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-015&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-015&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-015&quot;,
   &quot;text&quot;: &quot;Note 15: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-15T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-016</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-016&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-016&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-016&quot;,
   &quot;text&quot;: &quot;Note 16: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-16T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-017</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-017&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-017&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-017&quot;,
   &quot;text&quot;: &quot;Note 17: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-17T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-018</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-018&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-018&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-018&quot;,
   &quot;text&quot;: &quot;Note 18: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-18T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-019</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-019&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-019&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-019&quot;,
   &quot;text&quot;: &quot;Note 19: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-19T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-work&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/notes/note-020</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;notes&quot;,&quot;string&quot;,&quot;note-020&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;notes&quot;/string:&quot;note-020&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;note-020&quot;,
   &quot;text&quot;: &quot;Note 20: Preserve this text — Привет, 世界.&quot;,
   &quot;createdAt&quot;: &quot;2026-01-20T10:00:00Z&quot;,
   &quot;tagIds&quot;: [
     &quot;tag-personal&quot;
   ]
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/tags</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;store&quot;,&quot;notes&quot;,&quot;tags&quot;]" data-subject-kind="store"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;tags&quot; [store]</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;state&quot;: &quot;present&quot;,
   &quot;records&quot;: 2
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;state&quot;: &quot;present&quot;,
   &quot;records&quot;: 2
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/tags/tag-personal</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;tags&quot;,&quot;string&quot;,&quot;tag-personal&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;tags&quot;/string:&quot;tag-personal&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;tag-personal&quot;,
   &quot;name&quot;: &quot;Personal&quot;
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;id&quot;: &quot;tag-personal&quot;,
   &quot;name&quot;: &quot;Personal&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/tags/tag-work</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;tags&quot;,&quot;string&quot;,&quot;tag-work&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;tags&quot;/string:&quot;tag-work&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;tag-work&quot;,
   &quot;name&quot;: &quot;Work&quot;
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;id&quot;: &quot;tag-work&quot;,
   &quot;name&quot;: &quot;Work&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/scratch</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;store&quot;,&quot;notes&quot;,&quot;scratch&quot;]" data-subject-kind="store"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;scratch&quot; [store]</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;state&quot;: &quot;present&quot;,
   &quot;records&quot;: 1
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="true"><pre>{
   &quot;state&quot;: &quot;missing&quot;
-}</pre></td></tr><tr><td data-label="Subject"><code>indexedDB/notes/scratch/draft-temp</code></td><td data-label="Before"><pre>{
+}</pre></td></tr><tr data-storage-subject="[&quot;record&quot;,&quot;notes&quot;,&quot;scratch&quot;,&quot;string&quot;,&quot;draft-temp&quot;]" data-subject-kind="record"><td data-label="Subject"><code>indexedDB/&quot;notes&quot;/&quot;scratch&quot;/string:&quot;draft-temp&quot;</code></td><td data-label="Before" data-observed="true"><pre>{
   &quot;id&quot;: &quot;draft-temp&quot;,
   &quot;text&quot;: &quot;Intentionally transient&quot;
-}</pre></td><td data-label="After"><pre>{
+}</pre></td><td data-label="After" data-observed="false"><pre>{
   &quot;state&quot;: &quot;not-observed&quot;
 }</pre></td></tr></tbody></table></details><details><summary>Raw control snapshots</summary><pre>{
   &quot;before&quot;: {
@@ -2454,7 +2454,7 @@ h1{overflow-wrap:anywhere}
     &quot;problems&quot;: []
   }
 }</pre></details></section>
-<section><h2>Coverage and limitations</h2><ul><li>Static builds on one loopback HTTP origin.</li><li>no-store cold updates; production cache parity is not claimed.</li><li>Service workers are unsupported and never blocked or removed.</li><li>Only selected localStorage keys, string/finite-number IDB keys and JSON values.</li><li>Separate fresh control and upgrade profiles; no storage restore.</li><li>Reports contain selected application data. Hooks are trusted local code.</li></ul><p>The application author defines the contract. This result does not establish universal data safety or production cache parity.</p></section><footer>Captured 2026-10-11T19:39:42.288Z · Finished 2026-10-11T19:39:51.516Z. This self-contained report works offline and contains selected application data.</footer></main>
+<section><h2>Coverage and limitations</h2><ul><li>Static builds on one loopback HTTP origin.</li><li>no-store cold updates; production cache parity is not claimed.</li><li>Service workers are unsupported and never blocked or removed.</li><li>Only selected localStorage keys, string/finite-number IDB keys and JSON values.</li><li>Separate fresh control and upgrade profiles; no storage restore.</li><li>Reports contain selected application data. Hooks are trusted local code.</li></ul><p>The application author defines the contract. This result does not establish universal data safety or production cache parity.</p></section><footer>Captured 2026-10-11T19:39:42.288Z · Finished 2026-10-11T19:39:51.516Z. This self-contained report works offline and contains selected application data.<p class="muted">Sample HTML regenerated from a saved v0.1.0 capture; this is not a new browser run. Original run IDs and timestamps are retained. Capture SHA-256: <code>66b01198ab504f2cdc365b3fc3c153e531547c2b5c5267ad625d43a9e03d4c96</code>.</p></footer></main>
 <script>
 (()=>{let mode='all';const rows=[...document.querySelectorAll('tr[data-outcome]')],search=document.getElementById('search');function update(){let visible=0;for(const row of rows){row.hidden=(mode==='violations'&&row.dataset.outcome!=='VIOLATION')||!row.textContent.toLowerCase().includes(search.value.toLowerCase());if(!row.hidden)visible++}document.getElementById('visible').textContent=visible+' checks shown'}for(const id of ['all','violations'])document.getElementById(id).addEventListener('click',()=>{mode=id;for(const button of ['all','violations'])document.getElementById(button).setAttribute('aria-pressed',String(button===id));update()});search.addEventListener('input',update);update()})();
 </script></body></html>

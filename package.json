@@ -30,8 +30,13 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src tests scripts examples/notes/*.mjs",
     "test:unit": "tsc && node --test --test-concurrency=1 tests/unit/*.test.mjs",
+    "test:renderer": "tsc && node --test tests/unit/report.test.mjs",
+    "verify:schema": "tsc && node scripts/verify-schema.mjs",
     "test:e2e": "node --test --test-concurrency=1 tests/e2e/*.test.mjs",
     "test:consumer": "node tests/consumer/run.mjs",
+    "test:typed-keys": "node tests/consumer/typed-keys.mjs",
+    "benchmark:snapshots": "node --expose-gc --max-old-space-size=2048 scripts/benchmark-snapshots.mjs",
+    "samples:render": "node scripts/render-samples.mjs",
     "demo:media": "node scripts/record-demo.mjs",
     "verify:ui": "node scripts/verify-ui.mjs",
     "audit:publication": "node scripts/audit-publication.mjs",
@@ -44,6 +49,7 @@
   },
   "devDependencies": {
     "@types/node": "24.19.2",
+    "ajv": "8.20.0",
     "eslint": "10.12.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.71.1"

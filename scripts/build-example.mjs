@@ -4,7 +4,7 @@ import { z } from 'zod';
 import { caseSchema } from '../dist/config/index.js';
 const root = fileURLToPath(new URL('../', import.meta.url));
 await mkdir(`${root}schemas`, { recursive: true });
-await writeFile(`${root}schemas/upgrade-case.schema.json`, JSON.stringify(z.toJSONSchema(caseSchema), null, 2) + '\n');
+await writeFile(`${root}schemas/upgrade-case.schema.json`, JSON.stringify(z.toJSONSchema(caseSchema, { io: 'input' }), null, 2) + '\n');
 const app = await readFile(`${root}examples/notes/app-source.mjs`, 'utf8');
 const html = await readFile(`${root}examples/notes/index-source.html`, 'utf8');
 const data = await readFile(`${root}fixtures/expected/notes.json`, 'utf8');

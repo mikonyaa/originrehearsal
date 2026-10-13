@@ -81,11 +81,9 @@
         }
       },
       "required": [
-        "path",
         "buildSelector",
         "buildAttribute",
-        "readySelector",
-        "errorAttribute"
+        "readySelector"
       ],
       "additionalProperties": false
     },
@@ -106,7 +104,8 @@
             "type": "string",
             "minLength": 1,
             "maxLength": 500
-          }
+          },
+          "uniqueItems": true
         },
         "indexedDB": {
           "maxItems": 50,
@@ -127,7 +126,8 @@
                   "type": "string",
                   "minLength": 1,
                   "maxLength": 500
-                }
+                },
+                "uniqueItems": true
               }
             },
             "required": [
@@ -135,7 +135,8 @@
               "stores"
             ],
             "additionalProperties": false
-          }
+          },
+          "uniqueItems": true
         }
       },
       "required": [
@@ -171,11 +172,6 @@
           "maximum": 50000000
         }
       },
-      "required": [
-        "phaseTimeoutMs",
-        "maxRecordsPerStore",
-        "maxSnapshotBytes"
-      ],
       "additionalProperties": false
     },
     "gateway": {
@@ -196,10 +192,6 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "port",
-        "spaFallback"
-      ],
       "additionalProperties": false
     }
   },
@@ -211,9 +203,7 @@
     "app",
     "hooks",
     "seedInputs",
-    "storage",
-    "limits",
-    "gateway"
+    "storage"
   ],
   "additionalProperties": false,
   "$defs": {

@@ -66,7 +66,7 @@ document.documentElement.dataset.appReady = 'true';
 // document.documentElement.dataset.appError = error.message;
 ```
 
-Adapt [the working case](examples/notes/upgrade-case.json) and [the hooks](examples/notes/upgrade.hooks.mjs). All paths resolve relative to the case, including spaces and Unicode. The [JSON schema](schemas/upgrade-case.schema.json) aids editors; runtime validation additionally enforces different build IDs, distinct target names and safe app paths.
+Adapt [the working case](examples/notes/upgrade-case.json) and [the hooks](examples/notes/upgrade.hooks.mjs). All paths resolve relative to the case, including spaces and Unicode. The [JSON schema](schemas/upgrade-case.schema.json) describes **user input** (draft 2020-12), before runtime defaults: `app.path`, `app.errorAttribute`, `limits`, `gateway` and their defaulted members may be omitted. Unknown fields remain invalid. `npm run verify:schema` validates every shipped case, minimal inputs, bounds and negative fixtures with Ajv2020 without inserting defaults. [Runtime-only validation](docs/architecture.md#config-input-schema) remains necessary.
 
 Declare `seedInputs`, observed localStorage keys/IDB stores and resource limits. The hooks are explicit trusted local code:
 
@@ -115,6 +115,8 @@ Node independently challenges `GET /__originrehearsal__/phase?challenge=<nonce>`
 
 The JSON includes tool/browser/Node/OS versions, config/hook/build digests, origin, run links, seed input digest, chosen logical fingerprint and normalization, timed phases, version evidence, coverage, snapshots, checks, diagnostics and cleanup. The hook digest covers the explicitly named entry file; review any modules it imports as trusted code.
 
+The selected-values HTML table gives every observed supported record its own row. Native number `1` and string `"1"` are separate typed subjects; quoted database/store names keep `/` readable without affecting machine identity. JSON `null`, `false`, `0` and `""` remain exact values. An absent before/after entry is explicitly `not-observed`; tagged missing/error/unsupported observations remain distinct. Database/store metadata rows have separate identities from record rows. These presentation rules do not alter captures, storage contracts or the runner verdict.
+
 | Outcome | Exit | Meaning |
 | --- | ---: | --- |
 | PASS | 0 | Lifecycle, versions, cold control, declared coverage and required contracts confirmed |
@@ -130,6 +132,8 @@ Precedence: ERROR → UNSUPPORTED → VIOLATION → PASS. Timeouts and migration
 Only declared targets are read. Empty strings differ from missing localStorage keys. `localJSON` parses explicitly for a contract and fails clearly on invalid JSON.
 
 For IDB the browser first enumerates `indexedDB.databases()`. Absent DBs are not opened. Existing DBs use `open(name)` without a version; an unexpected `upgradeneeded` aborts accidental creation if the DB disappeared after listing. Reads use readonly transactions and await completion. Connections close in `finally` and on `versionchange`. Missing stores, read errors, blocked/aborted operations and timeouts retain distinct evidence.
+
+Each selected store is read in its own readonly transaction after app readiness. This is not an atomic snapshot of the whole origin while background writers run. Define readiness after migration and completed writes, and keep selected application data quiescent until capture completes; localStorage keys and different stores are read separately. See [transaction scope and consistency](docs/architecture.md#snapshot-semantics).
 
 Supported: string/finite-number IDB keys and JSON-compatible values. Date, Map, Set, Blob, ArrayBuffer, BigInt, undefined, NaN, cyclic values and other keys are detected **in Chromium before serialization** and return UNSUPPORTED. Record/byte limits discard incomplete observations rather than returning truncated success. No cookies, OPFS, Cache Storage or unselected storage is inspected. See [architecture and limits](docs/architecture.md).
 
@@ -155,17 +159,29 @@ npm run typecheck
 npm run lint
 npm run test:unit
 npm run build
-node ./dist/cli/main.js install-browser
+npm run verify:schema
+npm run test:renderer
+node ./dist/cli/main.js install-browser --json
+node ./dist/cli/main.js doctor --json
 npm run test:e2e
 npm run test:consumer
+npm run test:typed-keys
 node ./dist/cli/main.js demo --out ./artifacts/demo --no-open
 npm pack --json
 npm run verify:ui
+npm run verify:site
+npm run benchmark:snapshots # synthetic, 3 fresh-process repeats per size; 2 GiB Node heap budget
 npm run demo:media    # requires ffmpeg and ffprobe; records real browser video
 npm run audit:publication
 ```
 
 The unit suite uses Node's test runner. E2E uses native Chromium storage, independently observed fixture values, exit codes and actual process/profile lifecycle; no fakeIndexedDB substitute. The consumer suite packs the compiled product, installs it outside the repo with lifecycle scripts disabled, uses the installed executable, and exercises real good/bad/control/demo runs plus offline HTML. CI promotes its exact consumer-tested tarball without repacking. UI screenshots are checked at 1440/1024/390 px for every outcome; video is reproducible from the real runner.
+
+The independent typed-key consumer authors its own OLD/GOOD/BAD static builds and expected values, imports the public SDK, and requires GOOD=0/PASS and BAD=1/VIOLATION with PASS cold controls. It also validates each input against the schema in the installed archive and exercises falsy JSON, slash-containing names, metadata collisions and before-only/after-only records. Offline report assertions compare **all selected rows and exact JSON against raw captures**, at 1440/390 px, with keyboard/filter/empty-state checks and no external requests. `test:consumer` includes this regression; `test:typed-keys` runs it separately. Both require an explicit build first. Set `ORIGINREHEARSAL_TARBALL` to test an already-packed exact archive, and `ORIGINREHEARSAL_CONSUMER_ROOT` to an existing temporary directory outside your workspace if `TMPDIR` is workspace-local.
+
+`benchmark:snapshots` measures native readonly capture and a two-snapshot formatter fixture at 1,000 and 100,000 records, near the 50,000,000-byte capture ceiling. It records byte counts, timings, Node peak RSS, sampled owned-browser RSS and cleanup per repeat. This is a synthetic component benchmark, not a large cold-update run, full four-snapshot report guarantee or external application pilot. See [benchmark method and limits](docs/architecture.md#performance-evidence).
+
+Checked-in [sample HTML reports](site/reports/) were regenerated from the original v0.1.0 JSON captures, without changing their run IDs, timestamps or provenance. Existing demo media remains the original recording. [Sample provenance](docs/sample-report-provenance.md) distinguishes this formatter regeneration from fresh consumer/browser evidence. These fixes are local unreleased work; publishing them requires a new version and separate release verification.
 
 Playwright already supplies persistent contexts and storage snapshots (including IndexedDB and OPFS in supporting versions). OriginRehearsal combines them with a stable build gateway, separate backend/executed-code evidence, cold control, application contracts and reports. [fakeIndexedDB](https://github.com/dumbmatter/fakeIndexedDB) is useful for API tests; [Dexie](https://github.com/dexie/Dexie.js) supplies migration mechanisms. Neither determines your application's intended preservation semantics. [Background and primary sources](docs/architecture.md#existing-tools).
 
