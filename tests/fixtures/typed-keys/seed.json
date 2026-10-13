@@ -1,0 +1,14 @@
+{
+  "core": [
+    { "key": 1, "value": "NUMERIC_KEY_SENTINEL" },
+    { "key": "1", "value": "STRING_KEY_SENTINEL" },
+    { "key": "nullable", "value": null }
+  ],
+  "edges": [
+    { "key": "false", "value": false },
+    { "key": "zero", "value": 0 },
+    { "key": "empty", "value": "" },
+    { "key": "nullable", "value": null },
+    { "key": "before-only", "value": "BEFORE_ONLY" }
+  ]
+}

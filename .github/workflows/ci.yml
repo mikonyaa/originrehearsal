@@ -30,6 +30,8 @@ jobs:
       - run: npm run lint
       - run: npm run test:unit
       - run: npm run build
+      - run: npm run verify:schema
+      - run: git diff --exit-code -- schemas examples/notes
       - name: Install pinned Chromium and Linux dependencies
         run: node ./dist/cli/main.js install-browser --with-deps
       - run: npm run test:e2e

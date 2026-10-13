@@ -18,7 +18,7 @@ export const caseSchema = z.strictObject({
     errorAttribute: z.string().min(1).default('data-app-error'),
   }),
   hooks: z.string().min(1), seedInputs: z.json(),
-  storage: z.strictObject({ localStorageKeys: names, indexedDB: z.array(z.strictObject({ name: z.string().min(1).max(500), stores: names.min(1) })).max(50) })
+  storage: z.strictObject({ localStorageKeys: names.meta({ uniqueItems: true }), indexedDB: z.array(z.strictObject({ name: z.string().min(1).max(500), stores: names.min(1).meta({ uniqueItems: true }) })).max(50).meta({ uniqueItems: true }) })
     .refine(v => new Set(v.indexedDB.map(d => d.name)).size === v.indexedDB.length, 'Duplicate databases')
     .refine(v => v.localStorageKeys.length + v.indexedDB.length > 0, 'Declare at least one storage target'),
   limits: z.strictObject({

@@ -28,6 +28,37 @@ JSON validation runs inside the browser before Playwright serialization. Unsuppo
 
 Targets are selected coverage, not an inventory guarantee. Cookies, OPFS, unselected keys/stores, indexes, constraints and cache data are outside v0.1's contracts. Unsupported/error observations stop evaluation, with ERROR precedence. A migration abort or readiness failure has no AFTER data-loss verdict.
 
+`captureStorage` enumerates databases, then reads each selected store using `db.transaction(name, 'readonly')`; localStorage keys and other stores are observed separately. A readonly transaction supplies consistency within its own scope, as defined by [IndexedDB transaction scheduling](https://www.w3.org/TR/IndexedDB/#transaction-scheduling). There is no shared transaction across the origin. Readiness is an application contract, not a lock: authors should await committed writes and migration before signalling readiness, then pause writers affecting declared targets through capture. This guidance follows the actual separate transaction scopes; arbitrary background writes can change state between stores or between observations. No application lock or stronger atomicity guarantee is implemented.
+
+The supported native keys remain strings and finite numbers. IndexedDB [key comparison](https://www.w3.org/TR/IndexedDB/#key-construct) considers type as well as value; number `1` and string `"1"` are different records. HTML uses a serialized tuple `(subject kind, database, store, key type, key value)` for record identity, with shorter tuples for localStorage/database/store subjects. Display labels quote opaque names and show key type, but never determine identity. Presence is checked separately from the value, preserving present null and falsy values; tagged operational observations are copied unchanged. Raw snapshots and SDK/runner semantics are unaffected.
+
+## Config input schema
+
+`scripts/build-example.mjs` uses [Zod's input representation](https://zod.dev/json-schema#io) with `{ io: 'input' }`. The published schema is draft 2020-12; defaults annotate optional user fields rather than requiring runtime output fields. Strict objects still reject unknown properties. `uniqueItems` metadata mirrors existing runtime uniqueness refinements for localStorage keys, store names and identical database target objects; it does not replace or weaken those refinements.
+
+`npm run verify:schema` uses pinned development-only Ajv2020 with strict schema validation and no default insertion, type coercion or property removal. It checks every shipped `*-case.json`, a minimal input, partial/empty defaults, JSON seed values, positive/negative bounds and duplicate targets. It also compares the checked-in schema bytes with a newly generated input schema. CI builds, runs parity and requires no generated schema/example diff.
+
+Some semantic validation cannot be represented by this generated standard schema and stays explicitly at runtime:
+
+| Rule | Enforcement |
+| --- | --- |
+| OLD and NEW build IDs differ | `caseSchema` cross-field refinement |
+| Database names are unique even if store lists differ | `caseSchema` name-based refinement; JSON Schema `uniqueItems` only compares whole objects |
+| At least one localStorage/database target is declared | `caseSchema` refinement across target arrays |
+| Hooks explicitly name a local `.mjs` regular file with required exports | `loadCase`, filesystem checks and trusted module loading |
+| App path stays on the gateway origin and avoids reserved paths/backslashes | `loadCase` origin/path checks; schema only requires an initial slash |
+| Build paths exist, are immutable static builds, contain no symlinks and stay within resource limits | `loadCase` / `inspectBuild` / gateway phase checks |
+
+Parity fixtures name expected schema/runtime differences for the first three refinements. Filesystem, hook/path policy and other live checks are covered by the existing unit/lifecycle suites. Editor schema acceptance alone never establishes that a case is safe or runnable. Hooks and imports remain trusted local code, with the user's rights.
+
+## Performance evidence
+
+`npm run benchmark:snapshots` uses three fresh child processes and fresh owned profiles for each of two synthetic states: 1,000 records with 128-byte string values, and 100,000 records with 470-byte strings (near the 50,000,000-byte snapshot ceiling). Each read uses the production readonly probe, verifies every numeric key/value and an independent native count, and confirms browser close and profile/gateway cleanup. Limits are 120 seconds per phase, a 150-second browser-work deadline and a 2 GiB Node heap budget. No personal profile or production data is used.
+
+Results include seeding/capture/serialization times, exact serialized snapshot bytes, formatter elapsed time and output bytes, Node peak RSS (`resourceUsage().maxRSS`, converted from KiB), and 250 ms RSS samples of this owned browser's known process IDs. Browser RSS samples can miss new processes or brief spikes and can count shared memory multiple times. They are not an exact total machine peak. Each component result records runtime/browser/OS versions.
+
+The formatter measurement deliberately uses the same real observed snapshot twice in a formatting fixture; it is never saved as a cold-update report. This measures a two-snapshot presentation cost, not a full control+upgrade four-snapshot lifecycle at maximum state. Large captures are expensive and output size expands with repeated snapshots and HTML rows. The CLI's saved-report input ceiling remains 50,000,000 bytes for the entire JSON file, independently of the per-snapshot bound. Benchmarks are local measurements, not a latency or memory SLA or a claim of verification on other operating systems.
+
 ## Reports and publication
 
 JSON schema version is 1. The report stores expected build IDs, build hashes, executed app evidence, seed identity, both leg IDs, timing, observations, assertions, errors and cleanup. Hook digest covers the named entry module, not transitive imports. Reports contain selected data and must be handled accordingly.

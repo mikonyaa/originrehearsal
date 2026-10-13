@@ -1,0 +1,23 @@
+{
+  "core": [
+    { "key": 1, "value": "NUMERIC_KEY_SENTINEL" },
+    { "key": "1", "value": "STRING_KEY_SENTINEL" },
+    { "key": "nullable", "value": null }
+  ],
+  "edgesBefore": [
+    { "key": "before-only", "value": "BEFORE_ONLY" },
+    { "key": "empty", "value": "" },
+    { "key": "false", "value": false },
+    { "key": "nullable", "value": null },
+    { "key": "zero", "value": 0 }
+  ],
+  "edgesAfter": [
+    { "key": "after-only", "value": { "nested": null, "flag": false, "count": 0, "text": "" } },
+    { "key": "empty", "value": "" },
+    { "key": "false", "value": false },
+    { "key": "nullable", "value": null },
+    { "key": "zero", "value": 0 }
+  ],
+  "slashRecords": [{ "key": "d/e", "value": "</script><img src=https://example.invalid/escaped onerror=alert(1)> & \"quoted\"" }],
+  "metadataCollisionRecords": [{ "key": "c", "value": "RECORD_NOT_STORE" }]
+}
